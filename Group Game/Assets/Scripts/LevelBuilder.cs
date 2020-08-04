@@ -50,8 +50,8 @@ public class LevelBuilder : MonoBehaviour
         //level generator finished 
         Debug.Log("level generator finished");
 
-        yield return new WaitForSeconds(3);
-        ResetLevelGenerator();
+        //yield return new WaitForSeconds(3);
+        //ResetLevelGenerator();
     }
 
     void PlaceStartRoom()
