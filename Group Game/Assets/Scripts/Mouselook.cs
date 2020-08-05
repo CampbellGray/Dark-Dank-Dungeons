@@ -4,24 +4,18 @@ using UnityEngine;
 
 public class Mouselook : MonoBehaviour
 {
-    // Created by David Borger
-    // Based off this script https://answers.unity.com/questions/805776/isometric-game-player-look-at-cursor.html
-    Ray Ray; 
+    Ray ray; 
+    RaycastHit rayHit;
 
-    RaycastHit RayHit;
-
-    // Update is called once per frame
     void Update()
     {
-        // Cast a Ray to the Ground
-        Ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        // If Ray hits an object..
-        if (Physics.Raycast(Ray, out RayHit))
+        if (Physics.Raycast(ray, out rayHit, 100, 1 << LayerMask.NameToLayer("Ground")))
         {
-            if (RayHit.transform.tag == "Ground")
+            if (rayHit.transform.tag == "Ground")
             {
-                Vector3 targetPosition = new Vector3(RayHit.point.x, transform.position.y, RayHit.point.z);
+                Vector3 targetPosition = new Vector3(rayHit.point.x, transform.position.y, rayHit.point.z);
                 transform.LookAt(targetPosition);
             }
         }
