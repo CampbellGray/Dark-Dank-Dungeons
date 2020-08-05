@@ -57,12 +57,7 @@ public class LevelBuilder : MonoBehaviour
         player = Instantiate(playerPrefab) as PlayerController;
         player.transform.position = startRoom.playerStart.position;
         player.transform.rotation = startRoom.playerStart.rotation;
-
-        //yield return new WaitForSeconds(3);
-        //ResetLevelGenerator();
-
     }
-
     void PlaceStartRoom()
     {
         //instanticate room
@@ -234,7 +229,7 @@ public class LevelBuilder : MonoBehaviour
         }
     }
 
-    void ResetLevelGenerator()
+    public void ResetLevelGenerator()
     {
         Debug.LogError("reset level gererator");
 

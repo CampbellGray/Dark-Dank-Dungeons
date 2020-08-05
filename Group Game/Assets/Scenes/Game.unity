@@ -1340,7 +1340,7 @@ MonoBehaviour:
   - {fileID: 338150932}
   - {fileID: 596280760}
   - {fileID: 591600504}
-  iterationRange: {x: 25, y: 25}
+  iterationRange: {x: 2, y: 5}
   playerPrefab: {fileID: -3846379077206816638, guid: 945402f885ef79340a6b08f46fa91d0e,
     type: 3}
 --- !u!4 &1775035023
@@ -1559,6 +1559,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Start Room
       objectReference: {fileID: 0}
+    - target: {fileID: 7923638616638238192, guid: 18cf9345c5583a1478c2fc1ff4cd3ca4,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18cf9345c5583a1478c2fc1ff4cd3ca4, type: 3}
 --- !u!1001 &4383581713627911950
@@ -1715,7 +1720,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4221605487841152333, guid: 6cbfdef92f87c1f4dbb885a93d64bcef,
+        type: 3}
+      propertyPath: levelBuilder
+      value: 
+      objectReference: {fileID: 1775035022}
+    m_RemovedComponents:
+    - {fileID: 4221605487841152333, guid: 6cbfdef92f87c1f4dbb885a93d64bcef, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6cbfdef92f87c1f4dbb885a93d64bcef, type: 3}
 --- !u!1001 &8299289419699264555
 PrefabInstance:
