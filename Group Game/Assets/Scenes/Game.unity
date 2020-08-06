@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -624,7 +624,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &541510089
 Transform:
   m_ObjectHideFlags: 0
@@ -1340,7 +1340,7 @@ MonoBehaviour:
   - {fileID: 338150932}
   - {fileID: 596280760}
   - {fileID: 591600504}
-  iterationRange: {x: 2, y: 5}
+  iterationRange: {x: 25, y: 25}
   playerPrefab: {fileID: -3846379077206816638, guid: 945402f885ef79340a6b08f46fa91d0e,
     type: 3}
 --- !u!4 &1775035023
@@ -1499,6 +1499,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 541510089}
     m_Modifications:
+    - target: {fileID: 331852878994298044, guid: 18cf9345c5583a1478c2fc1ff4cd3ca4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 331852878994298044, guid: 18cf9345c5583a1478c2fc1ff4cd3ca4,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 331852878994298044, guid: 18cf9345c5583a1478c2fc1ff4cd3ca4,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 331852878994298044, guid: 18cf9345c5583a1478c2fc1ff4cd3ca4,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.1
+      objectReference: {fileID: 0}
     - target: {fileID: 3123444226353390230, guid: 18cf9345c5583a1478c2fc1ff4cd3ca4,
         type: 3}
       propertyPath: m_LocalPosition.x
