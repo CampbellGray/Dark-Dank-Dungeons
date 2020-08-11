@@ -439,6 +439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 5906001662423507644}
+  levelBuilder: {fileID: 0}
   speed: 12
   gravity: -9
   jumpHeight: 3
