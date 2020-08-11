@@ -1,14 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.XR;
 
 public class PlayerController : MonoBehaviour
 {
     // Created by David Borger
     // Based off this online tutorial https://www.youtube.com/watch?v=_QajrabyTJc&t= 
     public CharacterController controller;
-    public LevelBuilder levelBuilder;
 
     public float speed = 12f;
     public float gravity = -9;
@@ -20,11 +18,6 @@ public class PlayerController : MonoBehaviour
 
     //bool isGrounded;
     Vector3 velocity;
-
-    private void Start()
-    {
-        levelBuilder = FindObjectOfType<LevelBuilder>();
-    }
 
     /// <summary>
     /// This creates functionality for the player movement/jumping on the WASD and spacebar,
@@ -54,13 +47,5 @@ public class PlayerController : MonoBehaviour
         //velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "Exit")
-        {
-            levelBuilder.GetComponent<LevelBuilder>().ResetLevelGenerator();
-        }
     }
 }
