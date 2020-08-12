@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorways:
-  - {fileID: 6211915456295428551}
+  - {fileID: 8514545633285243123}
   meshCollider: {fileID: 903678225}
   playerStart: {fileID: 602774233072434343, guid: 945402f885ef79340a6b08f46fa91d0e,
     type: 3}
@@ -515,9 +515,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6169195609528949271}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6211915456295428551 stripped
+--- !u!114 &8514545633285243123 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 263542537264839632, guid: 8d0d3b42a3779d748a906e21232b2561,
+  m_CorrespondingSourceObject: {fileID: 2572923852393634532, guid: 8d0d3b42a3779d748a906e21232b2561,
     type: 3}
   m_PrefabInstance: {fileID: 6169195609528949271}
   m_PrefabAsset: {fileID: 0}

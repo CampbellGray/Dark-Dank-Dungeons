@@ -246,7 +246,12 @@ public class LevelBuilder : MonoBehaviour
             Destroy(endRoom.gameObject);
         }
 
-        foreach(Room room in placedRooms)
+        if (player)
+        {
+            Destroy(player.gameObject);
+        }
+
+        foreach (Room room in placedRooms)
         {
             Destroy(room.gameObject);
         }
