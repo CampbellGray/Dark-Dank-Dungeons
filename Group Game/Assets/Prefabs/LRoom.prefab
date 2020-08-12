@@ -457,8 +457,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorways:
-  - {fileID: 4575049041975016454}
-  - {fileID: 4575049041320311663}
+  - {fileID: 2261159728606616882}
+  - {fileID: 2261159729563572827}
   meshCollider: {fileID: 1468632273305394437}
 --- !u!1 &8948797699996937920
 GameObject:
@@ -574,9 +574,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4383581712425369791}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4575049041320311663 stripped
+--- !u!114 &2261159729563572827 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 263542537264839632, guid: 8d0d3b42a3779d748a906e21232b2561,
+  m_CorrespondingSourceObject: {fileID: 2572923852393634532, guid: 8d0d3b42a3779d748a906e21232b2561,
     type: 3}
   m_PrefabInstance: {fileID: 4383581712425369791}
   m_PrefabAsset: {fileID: 0}
@@ -666,9 +666,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4383581712543205334}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4575049041975016454 stripped
+--- !u!114 &2261159728606616882 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 263542537264839632, guid: 8d0d3b42a3779d748a906e21232b2561,
+  m_CorrespondingSourceObject: {fileID: 2572923852393634532, guid: 8d0d3b42a3779d748a906e21232b2561,
     type: 3}
   m_PrefabInstance: {fileID: 4383581712543205334}
   m_PrefabAsset: {fileID: 0}
