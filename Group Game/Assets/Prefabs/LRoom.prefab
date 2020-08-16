@@ -41,7 +41,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 2
-  m_Color: {r: 0.8207547, g: 0.5393138, b: 0.2206746, a: 1}
+  m_Color: {r: 0.21960782, g: 0.39955044, b: 0.81960785, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -164,7 +164,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 2
-  m_Color: {r: 0.8207547, g: 0.5393138, b: 0.2206746, a: 1}
+  m_Color: {r: 0.21960782, g: 0.39955044, b: 0.81960785, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -269,7 +269,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 2
-  m_Color: {r: 0.8207547, g: 0.5393138, b: 0.2206746, a: 1}
+  m_Color: {r: 0.21960782, g: 0.39955044, b: 0.81960785, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -360,7 +360,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 2
-  m_Color: {r: 0.8207547, g: 0.5393138, b: 0.2206746, a: 1}
+  m_Color: {r: 0.21960782, g: 0.39955044, b: 0.81960785, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -457,8 +457,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorways:
-  - {fileID: 4575049041975016454}
-  - {fileID: 4575049041320311663}
+  - {fileID: 2261159728606616882}
+  - {fileID: 2261159729563572827}
   meshCollider: {fileID: 1468632273305394437}
 --- !u!1 &8948797699996937920
 GameObject:
@@ -574,9 +574,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4383581712425369791}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4575049041320311663 stripped
+--- !u!114 &2261159729563572827 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 263542537264839632, guid: 8d0d3b42a3779d748a906e21232b2561,
+  m_CorrespondingSourceObject: {fileID: 2572923852393634532, guid: 8d0d3b42a3779d748a906e21232b2561,
     type: 3}
   m_PrefabInstance: {fileID: 4383581712425369791}
   m_PrefabAsset: {fileID: 0}
@@ -666,9 +666,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4383581712543205334}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4575049041975016454 stripped
+--- !u!114 &2261159728606616882 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 263542537264839632, guid: 8d0d3b42a3779d748a906e21232b2561,
+  m_CorrespondingSourceObject: {fileID: 2572923852393634532, guid: 8d0d3b42a3779d748a906e21232b2561,
     type: 3}
   m_PrefabInstance: {fileID: 4383581712543205334}
   m_PrefabAsset: {fileID: 0}
@@ -744,7 +744,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 36e6f2d55232a1a4eae1e1864af77f67, type: 2}
+      objectReference: {fileID: 2100000, guid: aeb38ffeb581fc34e897a801fbcf46fb, type: 2}
     - target: {fileID: -927199367670048503, guid: a0d7a66f4c9cf374f9cc772bc7f51649,
         type: 3}
       propertyPath: m_Name

@@ -43,7 +43,6 @@ GameObject:
   - component: {fileID: 6170731131192874248}
   - component: {fileID: 8271963849152317647}
   - component: {fileID: 307132656126982227}
-  - component: {fileID: 4221605487841152333}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Exit
@@ -124,19 +123,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4221605487841152333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2357326180002108019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb7c0724c5c40e04d8de987297ff62d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelBuilder: {fileID: 0}
 --- !u!1 &2958127343663350070
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,7 +272,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 36e6f2d55232a1a4eae1e1864af77f67, type: 2}
+  - {fileID: 2100000, guid: 2f53df88c8ef9714a812d29f2e994e26, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -494,7 +480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorways:
-  - {fileID: 6946806944931498136}
+  - {fileID: 4644497689104787884}
   meshCollider: {fileID: 5930559810966031139}
 --- !u!1 &2963871467535924933
 GameObject:
@@ -750,6 +736,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5804221298030905979, guid: 8d0d3b42a3779d748a906e21232b2561,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.17
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d0d3b42a3779d748a906e21232b2561, type: 3}
 --- !u!4 &3696595555399006515 stripped
@@ -758,9 +749,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7187831414777967432}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6946806944931498136 stripped
+--- !u!114 &4644497689104787884 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 263542537264839632, guid: 8d0d3b42a3779d748a906e21232b2561,
+  m_CorrespondingSourceObject: {fileID: 2572923852393634532, guid: 8d0d3b42a3779d748a906e21232b2561,
     type: 3}
   m_PrefabInstance: {fileID: 7187831414777967432}
   m_PrefabAsset: {fileID: 0}
