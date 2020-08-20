@@ -8,7 +8,8 @@ public class LevelBuilder : MonoBehaviour
     public List<Room> roomPrefabs = new List<Room>();
     public Vector2 iterationRange = new Vector2(3, 10);
     public PlayerController playerPrefab;
-
+    public BasicAI enemyPrefab;
+ 
     List<Doorway> availableDoorways = new List<Doorway>();
 
     StartRoom startRoom;

@@ -403,6 +403,7 @@ GameObject:
   - component: {fileID: 602774233072434343}
   - component: {fileID: -3846379077206816638}
   - component: {fileID: 5906001662423507644}
+  - component: {fileID: 7838792197942671281}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -439,6 +440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 5906001662423507644}
+  levelBuilder: {fileID: 0}
   speed: 12
   gravity: -9
   jumpHeight: 3
@@ -460,3 +462,17 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7838792197942671281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6166185110372018720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d233999eb67749459d653bf57abc3b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerObj: {fileID: 5322854284599380653}
+  enemySpawn: {fileID: 0}
