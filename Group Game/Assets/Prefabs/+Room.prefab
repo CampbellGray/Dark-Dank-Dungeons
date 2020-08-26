@@ -594,7 +594,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6709332096307217188}
   - component: {fileID: 8898747679059772192}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: +Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1204,10 +1204,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: 57e762a244437774ea9da56daeee08bd,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2d8c0cdc9efc8bc4886ddd85dec57a95, type: 2}
     - target: {fileID: -927199367670048503, guid: 57e762a244437774ea9da56daeee08bd,
         type: 3}
       propertyPath: m_Name
       value: FourDoorLavaRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 57e762a244437774ea9da56daeee08bd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 57e762a244437774ea9da56daeee08bd,
         type: 3}

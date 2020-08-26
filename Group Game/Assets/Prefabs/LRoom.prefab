@@ -557,7 +557,7 @@ GameObject:
   - component: {fileID: 90410411931553587}
   - component: {fileID: 8788030865246747610}
   - component: {fileID: 8127856238819218411}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: LRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -731,10 +731,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.001
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: dc0e278bf66a2cd4cb02a27aeff97525,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: aeb38ffeb581fc34e897a801fbcf46fb, type: 2}
     - target: {fileID: -927199367670048503, guid: dc0e278bf66a2cd4cb02a27aeff97525,
         type: 3}
       propertyPath: m_Name
       value: LDoorLavaRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: dc0e278bf66a2cd4cb02a27aeff97525,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: dc0e278bf66a2cd4cb02a27aeff97525,
         type: 3}
