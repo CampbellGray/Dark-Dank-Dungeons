@@ -9,12 +9,6 @@ public class BasicAI : MonoBehaviour
 {
     public State initialState;
     public float sprintMultiplyer;
-    [Header("Wander Settings")]
-    public Bounds boundsBox;
-    public AudioClip wanderSound;
-    [Header("Patrol Settings")]
-    public Transform[] patrolPoints;
-    public bool randomSequence = false;
     [Header("Chases Settings")]
     public Transform target;
     public float chaseDistance = 2.5f;
