@@ -8,8 +8,7 @@ public class LevelBuilder : MonoBehaviour
     public List<Room> roomPrefabs = new List<Room>();
     public Vector2 iterationRange = new Vector2(3, 10);
     public PlayerController playerPrefab;
-    public BasicAI enemyPrefab;
- 
+
     List<Doorway> availableDoorways = new List<Doorway>();
 
     StartRoom startRoom;
@@ -40,7 +39,7 @@ public class LevelBuilder : MonoBehaviour
         //random intteration
         int interations = Random.Range((int)iterationRange.x, (int)iterationRange.y);
 
-        for(int i = 0; i < interations; i++)
+        for (int i = 0; i < interations; i++)
         {
             //place random room from list
             PlaceRoom();
@@ -99,10 +98,10 @@ public class LevelBuilder : MonoBehaviour
         bool roomPlaced = false;
 
         //try all available doorways
-        foreach(Doorway availableDoorway in allAvailableDoorways)
+        foreach (Doorway availableDoorway in allAvailableDoorways)
         {
             //try all available doorways in current room
-            foreach(Doorway currentDoorway in currentRoomDoorways)
+            foreach (Doorway currentDoorway in currentRoomDoorways)
             {
                 //position room
                 PositionRoomAtDoorway(ref currentRoom, currentDoorway, availableDoorway);
@@ -166,10 +165,10 @@ public class LevelBuilder : MonoBehaviour
         bounds.Expand(-0.1f);
 
         Collider[] colliders = Physics.OverlapBox(bounds.center = room.transform.position, bounds.size / 2, room.transform.rotation, roomLayerMask);
-        if(colliders.Length > 0)
+        if (colliders.Length > 0)
         {
             // ignore collisions with current room
-            foreach(Collider c in colliders)
+            foreach (Collider c in colliders)
             {
                 if (c.transform.parent.gameObject.Equals(room.gameObject))
                 {

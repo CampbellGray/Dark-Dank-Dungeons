@@ -223,7 +223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3123444226353390230}
   - component: {fileID: 7213954862986313486}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Start Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -428,10 +428,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 99.99997
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: ade6fce5c7c448e409589648243c2385,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: aeb38ffeb581fc34e897a801fbcf46fb, type: 2}
     - target: {fileID: -927199367670048503, guid: ade6fce5c7c448e409589648243c2385,
         type: 3}
       propertyPath: m_Name
       value: OneDoorLavaRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: ade6fce5c7c448e409589648243c2385,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: ade6fce5c7c448e409589648243c2385,
         type: 3}
