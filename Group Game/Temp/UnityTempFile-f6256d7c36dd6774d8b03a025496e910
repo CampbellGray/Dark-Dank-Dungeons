@@ -286,12 +286,17 @@
 /define:ENABLE_LEGACY_INPUT_MANAGER
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
+Assets\Scripts\BasicAI.cs
 Assets\Scripts\Camera_Follow.cs
 Assets\Scripts\Doorway.cs
 Assets\Scripts\EndRoom.cs
+Assets\Scripts\EnemySpawn.cs
 Assets\Scripts\Exit.cs
 Assets\Scripts\LevelBuilder.cs
 Assets\Scripts\Mouselook.cs
 Assets\Scripts\PlayerController.cs
+Assets\Scripts\PlayerInteraction.cs
+Assets\Scripts\ProjectileDamage.cs
 Assets\Scripts\Room.cs
+Assets\Scripts\Shooter.cs
 Assets\Scripts\StartRoom.cs
