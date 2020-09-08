@@ -10,6 +10,7 @@ public class UI : MonoBehaviour
     public float healthCap = 4;
     public float maxHealth = 4;
     public Image heartImg;
+    public Image emptyHeartImg;
 
     [Header("Health")]
     public float currentMana = 4;
@@ -17,15 +18,17 @@ public class UI : MonoBehaviour
     public float maxMana = 4;
     public Image manaImg;
 
-    private UI ui;
-
     private void Awake()
     {
-        ui = FindObjectOfType<UI>();
         GameObject heartImgObject = GameObject.FindGameObjectWithTag("Health");
         if (heartImgObject != null)
         {
             heartImg = heartImgObject.GetComponent<Image>();
+        }
+        GameObject EmptyheartImgObject = GameObject.FindGameObjectWithTag("EmptyHealth");
+        if (EmptyheartImgObject != null)
+        {
+            emptyHeartImg = EmptyheartImgObject.GetComponent<Image>();
         }
         GameObject manaImgObject = GameObject.FindGameObjectWithTag("Mana");
         if(manaImgObject != null)
@@ -37,7 +40,6 @@ public class UI : MonoBehaviour
     {
         currentHealth = healthCap;
         currentMana = manaCap;
-        ui.UpdateHealthBar(currentHealth, maxHealth);
     }
     private void Update()
     {
@@ -55,6 +57,7 @@ public class UI : MonoBehaviour
     public void UpdateHealthBar(float currentHealth, float maxHealth)
     {
         heartImg.fillAmount = currentHealth / maxHealth;
+        emptyHeartImg.fillAmount = healthCap / maxHealth;
     }
 
     public void UpdateManaBar(float currentMana, float maxMana)

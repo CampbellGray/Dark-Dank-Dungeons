@@ -11,4 +11,12 @@ public class Projectile : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Enemy")
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }

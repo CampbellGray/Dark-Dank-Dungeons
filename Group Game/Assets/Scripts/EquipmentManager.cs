@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EquipmentManager : MonoBehaviour
 {
+    public Transform itemDropLocation;
+
     public GameObject ironChest;
     public GameObject ironHelmet;
     public GameObject goldenChest;
@@ -21,112 +23,122 @@ public class EquipmentManager : MonoBehaviour
         if(armour.data.type == ArmourType.helmet && armour.data.name == "Iron_Helmet")
         {
             SetHelmet(armour);
-            ironChest.gameObject.SetActive(true);
+            ironHelmet.gameObject.SetActive(true);
+            GetComponent<UI>().healthCap += currentHelmet.data.lifeBonus;
         }
         else if(armour.data.type == ArmourType.chest && armour.data.name == "Iron_Chest")
         {
             SetChest(armour);
-            ironHelmet.gameObject.SetActive(true);
+            ironChest.gameObject.SetActive(true);
+            GetComponent<UI>().healthCap += currentChest.data.lifeBonus;
         }
         else if (armour.data.type == ArmourType.helmet && armour.data.name == "Gold_Helmet")
         {
             SetHelmet(armour);
             goldenHelmet.gameObject.SetActive(true);
+            GetComponent<UI>().healthCap += currentHelmet.data.lifeBonus;
         }
         else if (armour.data.type == ArmourType.chest && armour.data.name == "Gold_Chest")
         {
             SetChest(armour);
             goldenChest.gameObject.SetActive(true);
+            GetComponent<UI>().healthCap += currentChest.data.lifeBonus;
         }
         else if (armour.data.type == ArmourType.helmet && armour.data.name == "Mana_Helmet")
         {
-            SetChest(armour);
+            SetHelmet(armour);
             manaHelmet.gameObject.SetActive(true);
+            GetComponent<UI>().manaCap += currentHelmet.data.lifeBonus;
         }
         else if (armour.data.type == ArmourType.chest && armour.data.name == "Mana_Chest")
         {
-            SetHelmet(armour);
+            SetChest(armour);
             manaChest.gameObject.SetActive(true);
+            GetComponent<UI>().manaCap += currentChest.data.lifeBonus;
         }
         else if (armour.data.type == ArmourType.helmet && armour.data.name == "Magma_Helmet")
         {
-            SetChest(armour);
+            SetHelmet(armour);
             MagmaHelmet.gameObject.SetActive(true);
+            GetComponent<UI>().manaCap += currentHelmet.data.lifeBonus;
         }
         else if (armour.data.type == ArmourType.chest && armour.data.name == "Magma_Chest")
         {
             SetChest(armour);
             MagmaChest.gameObject.SetActive(true);
+            GetComponent<UI>().manaCap += currentChest.data.lifeBonus;
         }
     }
-
     public void UnequipArmour(Armour armour)
     {
         if (armour.data.type == ArmourType.helmet && armour.data.name == "Iron_Helmet")
         {
-            ironChest.gameObject.SetActive(false);
+            ironHelmet.gameObject.SetActive(false);
+            GetComponent<UI>().healthCap -= currentHelmet.data.lifeBonus;
         }
         else if (armour.data.type == ArmourType.chest && armour.data.name == "Iron_Chest")
         {
-            ironHelmet.gameObject.SetActive(false);
+            ironChest.gameObject.SetActive(false);
+            GetComponent<UI>().healthCap -= currentChest.data.lifeBonus;
         }
         else if (armour.data.type == ArmourType.helmet && armour.data.name == "Gold_Helmet")
         {
             goldenHelmet.gameObject.SetActive(false);
+            GetComponent<UI>().healthCap -= currentHelmet.data.lifeBonus;
         }
         else if (armour.data.type == ArmourType.chest && armour.data.name == "Gold_Chest")
         {
             goldenChest.gameObject.SetActive(false);
+            GetComponent<UI>().healthCap -= currentChest.data.lifeBonus;
         }
         else if (armour.data.type == ArmourType.helmet && armour.data.name == "Mana_Helmet")
         {
             manaHelmet.gameObject.SetActive(false);
+            GetComponent<UI>().manaCap -= currentHelmet.data.lifeBonus;
         }
         else if (armour.data.type == ArmourType.chest && armour.data.name == "Mana_Chest")
         {
             manaChest.gameObject.SetActive(false);
+            GetComponent<UI>().manaCap -= currentChest.data.lifeBonus;
         }
         else if (armour.data.type == ArmourType.helmet && armour.data.name == "Magma_Helmet")
         {
             MagmaHelmet.gameObject.SetActive(false);
+            GetComponent<UI>().manaCap -= currentHelmet.data.lifeBonus;
         }
         else if (armour.data.type == ArmourType.chest && armour.data.name == "Magma_Chest")
         {
             MagmaChest.gameObject.SetActive(false);
+            GetComponent<UI>().manaCap -= currentChest.data.lifeBonus;
         }
     }
-
     private void SetHelmet(Armour helmet)
     {
         if(currentHelmet != null)
         {
             SpawnArmour(currentHelmet);
-            helmet.gameObject.SetActive(false);
             UnequipArmour(currentHelmet);
-            GetComponent<UI>().manaCap -= currentHelmet.data.lifeBonus;
         }
         currentHelmet = helmet;
-        Destroy(helmet);
-        GetComponent<UI>().manaCap += currentHelmet.data.lifeBonus;
+        helmet.gameObject.SetActive(false);
+        
     }
 
     private void SetChest(Armour chest)
     {
         if (currentChest != null)
-        {
+        { 
             SpawnArmour(currentChest);
-            chest.gameObject.SetActive(false);
             UnequipArmour(currentChest);
-            GetComponent<UI>().manaCap -= currentChest.data.lifeBonus;
         }
         currentChest = chest;
-        chest.gameObject.SetActive(true);
-        GetComponent<UI>().manaCap += currentChest.data.lifeBonus;
+        chest.gameObject.SetActive(false);
     }
 
     private void SpawnArmour(Armour armour) 
     {
-        armour.transform.SetParent(null);
-        armour.GetComponent<Collider>().enabled = true;
+        armour.gameObject.SetActive(true);
+        armour.transform.position = itemDropLocation.transform.position;
+        armour.transform.rotation = itemDropLocation.transform.rotation;
     }
 }

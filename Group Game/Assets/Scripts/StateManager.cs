@@ -18,6 +18,7 @@ public class StateManager : MonoBehaviour
     public AIState initalState = AIState.wander;
     public Wander wanderState;
     public Chase chaseState;
+    public RandomLoot randomLoot;
 
     private BehaviourState currentState;
 
@@ -26,6 +27,7 @@ public class StateManager : MonoBehaviour
 
     private void Awake()
     {
+        randomLoot = GetComponent<RandomLoot>();
         Agent = GetComponent<NavMeshAgent>();
     }
 
@@ -97,8 +99,8 @@ public class StateManager : MonoBehaviour
 
     public void Death()
     {
+        randomLoot.GetRandomItem();
         Destroy(this.gameObject);
-        Instantiate(item, transform.position, transform.rotation);
     }
 
     private void OnTriggerEnter(Collider other)

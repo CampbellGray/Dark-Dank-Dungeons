@@ -11,6 +11,7 @@ TagManager:
   - Mana
   - Enemy
   - Projectile
+  - EmptyHealth
   layers:
   - Default
   - TransparentFX
