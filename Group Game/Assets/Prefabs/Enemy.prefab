@@ -266,6 +266,7 @@ MonoBehaviour:
   chaseState:
     ignoreState: 0
     chaseSpeed: 10
+  randomLoot: {fileID: 0}
 --- !u!114 &8280484265818650893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,15 +280,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
+  - {fileID: 1073606083809594376, guid: bf8bacfa6c0cfee49b6776ae9a77bb5d, type: 3}
+  - {fileID: 1073606083809594376, guid: bf8bacfa6c0cfee49b6776ae9a77bb5d, type: 3}
+  - {fileID: 1073606083809594376, guid: bf8bacfa6c0cfee49b6776ae9a77bb5d, type: 3}
+  - {fileID: 1073606083809594376, guid: bf8bacfa6c0cfee49b6776ae9a77bb5d, type: 3}
+  - {fileID: 1073606083809594376, guid: bf8bacfa6c0cfee49b6776ae9a77bb5d, type: 3}
+  - {fileID: 1073606083809594376, guid: bf8bacfa6c0cfee49b6776ae9a77bb5d, type: 3}
+  - {fileID: 1073606083809594376, guid: bf8bacfa6c0cfee49b6776ae9a77bb5d, type: 3}
+  - {fileID: 1073606083809594376, guid: bf8bacfa6c0cfee49b6776ae9a77bb5d, type: 3}
   - {fileID: 6145425957374467475, guid: 61d61f3f12040604da3fbbba5691bdab, type: 3}
-  - {fileID: 6134721834114819470, guid: 65490d4b7f1139f44a5ab5cb906f140c, type: 3}
   - {fileID: 6001052428062363459, guid: bddad0b908f728041a372e3f74636e5f, type: 3}
   - {fileID: 7837483238117726522, guid: ca6f24a11a904244b9e3f1476923ff36, type: 3}
+  - {fileID: 6134721834114819470, guid: 65490d4b7f1139f44a5ab5cb906f140c, type: 3}
   - {fileID: 15227431598076185, guid: 1af01bffb81377e46acc541d5bf27d82, type: 3}
-  - {fileID: 4530607256597380102, guid: 2947fa79a2b05c145a202a28d715e81e, type: 3}
   - {fileID: 4741859523441376094, guid: f2575c05988d3a74cbb07767b0d6bb72, type: 3}
+  - {fileID: 4530607256597380102, guid: 2947fa79a2b05c145a202a28d715e81e, type: 3}
   - {fileID: 793740072688539554, guid: 828b16dfc7fa44146b32c65d3c7fbf00, type: 3}
-  table: 50000000460000003c00000032000000280000001e000000140000000a000000
+  table: 500000005000000050000000500000005000000050000000500000005000000028000000230000001e00000019000000140000000f0000000a00000005000000
   itemSpawnLoc: {fileID: 8104187526878242954}
   total: 0
   randomNumber: 0
