@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class LevelBuilder : MonoBehaviour
 {
@@ -8,16 +10,20 @@ public class LevelBuilder : MonoBehaviour
     public List<Room> roomPrefabs = new List<Room>();
     public Vector2 iterationRange = new Vector2(3, 10);
     public PlayerController playerPrefab;
+    public StateManager enemyPrefab;
+    public LinkedList<Transform> enemySpawnLocation;
 
     List<Doorway> availableDoorways = new List<Doorway>();
 
+    EnemySpawn enemySpawn;
     StartRoom startRoom;
     EndRoom endRoom;
     List<Room> placedRooms = new List<Room>();
-
     LayerMask roomLayerMask;
-
     PlayerController player;
+    StateManager enemy;
+
+    public NavMeshSurface[] surfaces;
 
     private void Start()
     {
@@ -39,7 +45,7 @@ public class LevelBuilder : MonoBehaviour
         //random intteration
         int interations = Random.Range((int)iterationRange.x, (int)iterationRange.y);
 
-        for (int i = 0; i < interations; i++)
+        for(int i = 0; i < interations; i++)
         {
             //place random room from list
             PlaceRoom();
@@ -50,6 +56,12 @@ public class LevelBuilder : MonoBehaviour
         PlaceEndRoom();
         yield return interval;
 
+        //Generates the NAVMESH
+        for (int i = 0; i < surfaces.Length; i++)
+        {
+            surfaces[i].BuildNavMesh();
+        }
+
         //level generator finished 
         Debug.Log("level generator finished");
 
@@ -57,6 +69,7 @@ public class LevelBuilder : MonoBehaviour
         player = Instantiate(playerPrefab) as PlayerController;
         player.transform.position = startRoom.playerStart.position;
         player.transform.rotation = startRoom.playerStart.rotation;
+
     }
     void PlaceStartRoom()
     {
@@ -98,10 +111,10 @@ public class LevelBuilder : MonoBehaviour
         bool roomPlaced = false;
 
         //try all available doorways
-        foreach (Doorway availableDoorway in allAvailableDoorways)
+        foreach(Doorway availableDoorway in allAvailableDoorways)
         {
             //try all available doorways in current room
-            foreach (Doorway currentDoorway in currentRoomDoorways)
+            foreach(Doorway currentDoorway in currentRoomDoorways)
             {
                 //position room
                 PositionRoomAtDoorway(ref currentRoom, currentDoorway, availableDoorway);
@@ -123,6 +136,9 @@ public class LevelBuilder : MonoBehaviour
 
                 availableDoorway.gameObject.SetActive(false);
                 availableDoorways.Remove(availableDoorway);
+
+                //Spawns in the enemy in the room
+                currentRoom.GetComponent<EnemySpawn>().EnemySpawner();
 
                 //exit the loop
                 break;
@@ -165,10 +181,10 @@ public class LevelBuilder : MonoBehaviour
         bounds.Expand(-0.1f);
 
         Collider[] colliders = Physics.OverlapBox(bounds.center = room.transform.position, bounds.size / 2, room.transform.rotation, roomLayerMask);
-        if (colliders.Length > 0)
+        if(colliders.Length > 0)
         {
             // ignore collisions with current room
-            foreach (Collider c in colliders)
+            foreach(Collider c in colliders)
             {
                 if (c.transform.parent.gameObject.Equals(room.gameObject))
                 {

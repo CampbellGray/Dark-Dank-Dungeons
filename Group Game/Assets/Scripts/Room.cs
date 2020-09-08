@@ -6,6 +6,7 @@ public class Room : MonoBehaviour
 {
     public Doorway[] doorways;
     public MeshCollider meshCollider;
+    //public Transform[] enemySpawn;
 
     public Bounds RoomBounds
     {

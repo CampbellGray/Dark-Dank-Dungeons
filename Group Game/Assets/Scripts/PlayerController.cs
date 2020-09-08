@@ -1,21 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    // Created by David Borger
-    // Based off this online tutorial https://www.youtube.com/watch?v=_QajrabyTJc&t= 
     public CharacterController controller;
     public LevelBuilder levelBuilder;
 
     public float speed = 12f;
-    public float gravity = -9;
-    public float jumpHeight = 3f;
-
-    //public Transform groundCheck;
-    //public float groundDistance = 0.4f;
-    //public LayerMask groundMask;
 
     //bool isGrounded;
     Vector3 velocity;
@@ -42,7 +36,7 @@ public class PlayerController : MonoBehaviour
     {
         if(other.gameObject.tag == "Exit")
         {
-            levelBuilder.GetComponent<LevelBuilder>().ResetLevelGenerator();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

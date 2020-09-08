@@ -6,7 +6,11 @@ TagManager:
   tags:
   - Ground
   - Exit
+  - Wall
+  - Health
+  - Mana
   - Enemy
+  - Projectile
   layers:
   - Default
   - TransparentFX

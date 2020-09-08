@@ -51,21 +51,27 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9894}
+      Script: {instanceID: 9882}
     - Class: 114
-      Script: {instanceID: 9914}
+      Script: {instanceID: 9954}
     - Class: 114
-      Script: {instanceID: 9916}
+      Script: {instanceID: 9962}
     - Class: 114
-      Script: {instanceID: 9986}
+      Script: {instanceID: 9978}
     - Class: 114
-      Script: {instanceID: 10436}
+      Script: {instanceID: 9980}
     - Class: 114
-      Script: {instanceID: 10514}
+      Script: {instanceID: 10060}
     - Class: 114
-      Script: {instanceID: 10728}
+      Script: {instanceID: 10600}
     - Class: 114
-      Script: {instanceID: 11186}
+      Script: {instanceID: 10692}
+    - Class: 114
+      Script: {instanceID: 10926}
+    - Class: 114
+      Script: {instanceID: 11122}
+    - Class: 114
+      Script: {instanceID: 11448}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 136
@@ -211,7 +217,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 7309360c007f634854b9223886ec6153
+      Hash: db2556ef9fcdd76fc6beee6b0906fe69
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -535,6 +541,12 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
+      Hash: 6ca83f255b1dcded920707e5912035a9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UI
+  - hash:
+      serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -548,5 +560,5 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/30006423/OneDrive - TAFE/Desktop/Dark-Dank-Dungeons/Group Game/Builds/V0.2
-    - Test - Lava textures on the rooms/Group Game.exe
+  playerPath: C:/Users/30006423/OneDrive - TAFE/Desktop/CampbellGray-ddd-personal-version-73aa719678f6/Group
+    Game/Builds/V0.3 - Test - New textures and end room portal/Group Game.exe
