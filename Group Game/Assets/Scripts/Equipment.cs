@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Armour : MonoBehaviour
+public class Equipment : MonoBehaviour
 {
     public ArmourData data;
 
@@ -18,12 +18,12 @@ public class Armour : MonoBehaviour
     }
 }
 
-public enum ArmourType { none, helmet, chest }
+public enum ArmourType { none, helmet, chest, staff }
 
 [System.Serializable]
 public struct ArmourData
 {
     public ArmourType type;
     public string name;
-    public int lifeBonus;
+    public int bonus;
 }

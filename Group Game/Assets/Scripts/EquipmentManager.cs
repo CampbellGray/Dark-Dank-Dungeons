@@ -12,107 +12,163 @@ public class EquipmentManager : MonoBehaviour
     public GameObject goldenHelmet;
     public GameObject manaChest;
     public GameObject manaHelmet;
-    public GameObject MagmaChest;
-    public GameObject MagmaHelmet;
+    public GameObject magmaChest;
+    public GameObject magmaHelmet;
+    public GameObject greenStaff;
+    public GameObject blueStaff;
+    public GameObject yellowStaff;
+    public GameObject purpleStaff;
 
-    public Armour currentHelmet;
-    public Armour currentChest;
+    public Equipment currentHelmet;
+    public Equipment currentChest;
+    public Equipment currentStaff;
 
-    public void EquipArmour(Armour armour)
+    public Shooter shooter;
+
+    private void Start()
     {
-        if(armour.data.type == ArmourType.helmet && armour.data.name == "Iron_Helmet")
+        GetComponent<Shooter>();
+    }
+
+    public void EquipArmour(Equipment equipment)
+    {
+        if(equipment.data.type == ArmourType.helmet && equipment.data.name == "Iron_Helmet")
         {
-            SetHelmet(armour);
+            SetHelmet(equipment);
             ironHelmet.gameObject.SetActive(true);
-            GetComponent<UI>().healthCap += currentHelmet.data.lifeBonus;
+            GetComponent<UI>().healthCap += currentHelmet.data.bonus;
         }
-        else if(armour.data.type == ArmourType.chest && armour.data.name == "Iron_Chest")
+        else if(equipment.data.type == ArmourType.chest && equipment.data.name == "Iron_Chest")
         {
-            SetChest(armour);
+            SetChest(equipment);
             ironChest.gameObject.SetActive(true);
-            GetComponent<UI>().healthCap += currentChest.data.lifeBonus;
+            GetComponent<UI>().healthCap += currentChest.data.bonus;
         }
-        else if (armour.data.type == ArmourType.helmet && armour.data.name == "Gold_Helmet")
+        else if (equipment.data.type == ArmourType.helmet && equipment.data.name == "Gold_Helmet")
         {
-            SetHelmet(armour);
+            SetHelmet(equipment);
             goldenHelmet.gameObject.SetActive(true);
-            GetComponent<UI>().healthCap += currentHelmet.data.lifeBonus;
+            GetComponent<UI>().healthCap += currentHelmet.data.bonus;
         }
-        else if (armour.data.type == ArmourType.chest && armour.data.name == "Gold_Chest")
+        else if (equipment.data.type == ArmourType.chest && equipment.data.name == "Gold_Chest")
         {
-            SetChest(armour);
+            SetChest(equipment);
             goldenChest.gameObject.SetActive(true);
-            GetComponent<UI>().healthCap += currentChest.data.lifeBonus;
+            GetComponent<UI>().healthCap += currentChest.data.bonus;
         }
-        else if (armour.data.type == ArmourType.helmet && armour.data.name == "Mana_Helmet")
+        else if (equipment.data.type == ArmourType.helmet && equipment.data.name == "Mana_Helmet")
         {
-            SetHelmet(armour);
+            SetHelmet(equipment);
             manaHelmet.gameObject.SetActive(true);
-            GetComponent<UI>().manaCap += currentHelmet.data.lifeBonus;
+            GetComponent<UI>().manaCap += currentHelmet.data.bonus;
         }
-        else if (armour.data.type == ArmourType.chest && armour.data.name == "Mana_Chest")
+        else if (equipment.data.type == ArmourType.chest && equipment.data.name == "Mana_Chest")
         {
-            SetChest(armour);
+            SetChest(equipment);
             manaChest.gameObject.SetActive(true);
-            GetComponent<UI>().manaCap += currentChest.data.lifeBonus;
+            GetComponent<UI>().manaCap += currentChest.data.bonus;
         }
-        else if (armour.data.type == ArmourType.helmet && armour.data.name == "Magma_Helmet")
+        else if (equipment.data.type == ArmourType.helmet && equipment.data.name == "Magma_Helmet")
         {
-            SetHelmet(armour);
-            MagmaHelmet.gameObject.SetActive(true);
-            GetComponent<UI>().manaCap += currentHelmet.data.lifeBonus;
+            SetHelmet(equipment);
+            magmaHelmet.gameObject.SetActive(true);
+            GetComponent<UI>().manaCap += currentHelmet.data.bonus;
         }
-        else if (armour.data.type == ArmourType.chest && armour.data.name == "Magma_Chest")
+        else if (equipment.data.type == ArmourType.chest && equipment.data.name == "Magma_Chest")
         {
-            SetChest(armour);
-            MagmaChest.gameObject.SetActive(true);
-            GetComponent<UI>().manaCap += currentChest.data.lifeBonus;
+            SetChest(equipment);
+            magmaChest.gameObject.SetActive(true);
+            GetComponent<UI>().manaCap += currentChest.data.bonus;
+        }
+        else if (equipment.data.type == ArmourType.staff && equipment.data.name == "Green Staff")
+        {
+            SetStaff(equipment);
+            greenStaff.gameObject.SetActive(true);
+            shooter.manaRegenSpeed += currentStaff.data.bonus;
+        }
+        else if (equipment.data.type == ArmourType.staff && equipment.data.name == "Blue Staff")
+        {
+            SetStaff(equipment);
+            blueStaff.gameObject.SetActive(true);
+            shooter.manaRegenSpeed += currentStaff.data.bonus;
+        }
+        else if (equipment.data.type == ArmourType.staff && equipment.data.name == "Yellow Staff")
+        {
+            SetStaff(equipment);
+            yellowStaff.gameObject.SetActive(true);
+            shooter.manaRegenSpeed += currentStaff.data.bonus;
+        }
+        else if (equipment.data.type == ArmourType.staff && equipment.data.name == "Purple Staff")
+        {
+            SetStaff(equipment);
+            purpleStaff.gameObject.SetActive(true);
+            shooter.manaRegenSpeed += currentStaff.data.bonus;
         }
     }
-    public void UnequipArmour(Armour armour)
+    public void UnequipArmour(Equipment equipment)
     {
-        if (armour.data.type == ArmourType.helmet && armour.data.name == "Iron_Helmet")
+        if (equipment.data.type == ArmourType.helmet && equipment.data.name == "Iron_Helmet")
         {
             ironHelmet.gameObject.SetActive(false);
-            GetComponent<UI>().healthCap -= currentHelmet.data.lifeBonus;
+            GetComponent<UI>().healthCap -= currentHelmet.data.bonus;
         }
-        else if (armour.data.type == ArmourType.chest && armour.data.name == "Iron_Chest")
+        else if (equipment.data.type == ArmourType.chest && equipment.data.name == "Iron_Chest")
         {
             ironChest.gameObject.SetActive(false);
-            GetComponent<UI>().healthCap -= currentChest.data.lifeBonus;
+            GetComponent<UI>().healthCap -= currentChest.data.bonus;
         }
-        else if (armour.data.type == ArmourType.helmet && armour.data.name == "Gold_Helmet")
+        else if (equipment.data.type == ArmourType.helmet && equipment.data.name == "Gold_Helmet")
         {
             goldenHelmet.gameObject.SetActive(false);
-            GetComponent<UI>().healthCap -= currentHelmet.data.lifeBonus;
+            GetComponent<UI>().healthCap -= currentHelmet.data.bonus;
         }
-        else if (armour.data.type == ArmourType.chest && armour.data.name == "Gold_Chest")
+        else if (equipment.data.type == ArmourType.chest && equipment.data.name == "Gold_Chest")
         {
             goldenChest.gameObject.SetActive(false);
-            GetComponent<UI>().healthCap -= currentChest.data.lifeBonus;
+            GetComponent<UI>().healthCap -= currentChest.data.bonus;
         }
-        else if (armour.data.type == ArmourType.helmet && armour.data.name == "Mana_Helmet")
+        else if (equipment.data.type == ArmourType.helmet && equipment.data.name == "Mana_Helmet")
         {
             manaHelmet.gameObject.SetActive(false);
-            GetComponent<UI>().manaCap -= currentHelmet.data.lifeBonus;
+            GetComponent<UI>().manaCap -= currentHelmet.data.bonus;
         }
-        else if (armour.data.type == ArmourType.chest && armour.data.name == "Mana_Chest")
+        else if (equipment.data.type == ArmourType.chest && equipment.data.name == "Mana_Chest")
         {
             manaChest.gameObject.SetActive(false);
-            GetComponent<UI>().manaCap -= currentChest.data.lifeBonus;
+            GetComponent<UI>().manaCap -= currentChest.data.bonus;
         }
-        else if (armour.data.type == ArmourType.helmet && armour.data.name == "Magma_Helmet")
+        else if (equipment.data.type == ArmourType.helmet && equipment.data.name == "Magma_Helmet")
         {
-            MagmaHelmet.gameObject.SetActive(false);
-            GetComponent<UI>().manaCap -= currentHelmet.data.lifeBonus;
+            magmaHelmet.gameObject.SetActive(false);
+            GetComponent<UI>().manaCap -= currentHelmet.data.bonus;
         }
-        else if (armour.data.type == ArmourType.chest && armour.data.name == "Magma_Chest")
+        else if (equipment.data.type == ArmourType.chest && equipment.data.name == "Magma_Chest")
         {
-            MagmaChest.gameObject.SetActive(false);
-            GetComponent<UI>().manaCap -= currentChest.data.lifeBonus;
+            magmaChest.gameObject.SetActive(false);
+            GetComponent<UI>().manaCap -= currentChest.data.bonus;
+        }
+        else if (equipment.data.type == ArmourType.staff && equipment.data.name == "Green Staff")
+        {
+            greenStaff.gameObject.SetActive(false);
+            shooter.manaRegenSpeed -= currentStaff.data.bonus;
+        }
+        else if (equipment.data.type == ArmourType.staff && equipment.data.name == "Blue Staff")
+        {
+            blueStaff.gameObject.SetActive(false);
+            shooter.manaRegenSpeed -= currentStaff.data.bonus;
+        }
+        else if (equipment.data.type == ArmourType.staff && equipment.data.name == "Yellow Staff")
+        {
+            yellowStaff.gameObject.SetActive(false);
+            shooter.manaRegenSpeed -= currentStaff.data.bonus;
+        }
+        else if (equipment.data.type == ArmourType.staff && equipment.data.name == "Purple Staff")
+        {
+            purpleStaff.gameObject.SetActive(false);
+            shooter.manaRegenSpeed -= currentStaff.data.bonus;
         }
     }
-    private void SetHelmet(Armour helmet)
+    private void SetHelmet(Equipment helmet)
     {
         if(currentHelmet != null)
         {
@@ -124,7 +180,7 @@ public class EquipmentManager : MonoBehaviour
         
     }
 
-    private void SetChest(Armour chest)
+    private void SetChest(Equipment chest)
     {
         if (currentChest != null)
         { 
@@ -134,8 +190,18 @@ public class EquipmentManager : MonoBehaviour
         currentChest = chest;
         chest.gameObject.SetActive(false);
     }
+    private void SetStaff(Equipment staff)
+    {
+        if (currentStaff != null)
+        {
+            SpawnArmour(currentStaff);
+            UnequipArmour(currentStaff);
+        }
+        currentStaff = staff;
+        staff.gameObject.SetActive(false);
+    }
 
-    private void SpawnArmour(Armour armour) 
+    private void SpawnArmour(Equipment armour) 
     {
         armour.gameObject.SetActive(true);
         armour.transform.position = itemDropLocation.transform.position;
