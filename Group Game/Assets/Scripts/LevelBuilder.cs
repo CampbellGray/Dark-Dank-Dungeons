@@ -11,7 +11,7 @@ public class LevelBuilder : MonoBehaviour
     public Vector2 iterationRange = new Vector2(3, 10);
     public PlayerController playerPrefab;
     public StateManager enemyPrefab;
-    public LinkedList<Transform> enemySpawnLocation;
+    public List<EnemySpawn> enemySpawnRooms;
 
     List<Doorway> availableDoorways = new List<Doorway>();
 
@@ -21,7 +21,6 @@ public class LevelBuilder : MonoBehaviour
     List<Room> placedRooms = new List<Room>();
     LayerMask roomLayerMask;
     PlayerController player;
-    StateManager enemy;
 
     public NavMeshSurface[] surfaces;
 
@@ -70,6 +69,11 @@ public class LevelBuilder : MonoBehaviour
         player.transform.position = startRoom.playerStart.position;
         player.transform.rotation = startRoom.playerStart.rotation;
 
+        foreach(EnemySpawn enemy in enemySpawnRooms)
+        {
+
+            enemy.EnemyReposition();
+        }
     }
     void PlaceStartRoom()
     {
@@ -139,6 +143,8 @@ public class LevelBuilder : MonoBehaviour
 
                 //Spawns in the enemy in the room
                 currentRoom.GetComponent<EnemySpawn>().EnemySpawner();
+                
+                enemySpawnRooms.Add(currentRoom.GetComponent<EnemySpawn>());
 
                 //exit the loop
                 break;

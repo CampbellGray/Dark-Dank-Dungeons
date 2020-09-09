@@ -661,9 +661,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6131824402695101721, guid: a01c8255c7b1bd64395f2e9525c7193e,
     type: 3}
-  enemySpawnLoc1: {fileID: 6248453191408283285}
-  enemySpawnLoc2: {fileID: 0}
-  enemySpawnLoc3: {fileID: 0}
+  enemySpawnLoc:
+  - {fileID: 6248453191408283285}
+  enemies: []
 --- !u!1 &6551922462790442057
 GameObject:
   m_ObjectHideFlags: 0
