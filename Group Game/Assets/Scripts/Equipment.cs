@@ -25,5 +25,5 @@ public struct ArmourData
 {
     public ArmourType type;
     public string name;
-    public int bonus;
+    public float bonus;
 }

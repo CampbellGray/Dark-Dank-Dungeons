@@ -395,7 +395,7 @@ MonoBehaviour:
   projectile: {fileID: 2802070943525614401, guid: 2d14a36ba4965d9429b4c3ef20a7e8ec,
     type: 3}
   speed: 10
-  manaRegenSpeed: 0.5
+  manaRegenSpeed: 0
   ui: {fileID: 0}
 --- !u!114 &1280985060921781056
 MonoBehaviour:
@@ -2940,7 +2940,7 @@ MonoBehaviour:
   maxHealth: 10
   heartImg: {fileID: 0}
   emptyHeartImg: {fileID: 0}
-  currentMana: 4
+  currentMana: 0
   manaCap: 4
   maxMana: 10
   manaImg: {fileID: 0}

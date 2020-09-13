@@ -12,7 +12,7 @@ public class UI : MonoBehaviour
     public Image heartImg;
     public Image emptyHeartImg;
 
-    [Header("Health")]
+    [Header("Mana")]
     public float currentMana = 4;
     public float manaCap = 4;
     public float maxMana = 4;
@@ -39,7 +39,6 @@ public class UI : MonoBehaviour
     void Start()
     {
         currentHealth = healthCap;
-        currentMana = manaCap;
     }
     private void Update()
     {
