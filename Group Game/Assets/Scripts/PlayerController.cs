@@ -8,8 +8,9 @@ public class PlayerController : MonoBehaviour
 {
     public CharacterController controller;
     public LevelBuilder levelBuilder;
-
     public float speed = 12f;
+
+    private Animator anim;
 
     //bool isGrounded;
     Vector3 velocity;
@@ -17,6 +18,8 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         levelBuilder = FindObjectOfType<LevelBuilder>();
+        anim = GetComponentInChildren<Animator>();
+        anim.SetInteger("Condition", 0);
     }
 
     /// <summary>
