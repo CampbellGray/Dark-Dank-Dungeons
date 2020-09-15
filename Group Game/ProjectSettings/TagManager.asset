@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - Projectile
   - EmptyHealth
+  - Character
   layers:
   - Default
   - TransparentFX

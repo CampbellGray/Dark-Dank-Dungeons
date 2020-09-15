@@ -397,6 +397,7 @@ MonoBehaviour:
   speed: 10
   manaRegenSpeed: 0
   ui: {fileID: 0}
+  attack: {fileID: 1466030862276971183}
 --- !u!114 &1280985060921781056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2465,7 +2466,7 @@ GameObject:
   - component: {fileID: 1466030862276971183}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2876,6 +2877,7 @@ MonoBehaviour:
   controller: {fileID: 5906001662423507644}
   levelBuilder: {fileID: 0}
   speed: 12
+  movement: {fileID: 1466030862276971183}
 --- !u!143 &5906001662423507644
 CharacterController:
   m_ObjectHideFlags: 0

@@ -7,10 +7,12 @@ public class Shooter : MonoBehaviour
     public float speed = 40f;
     public float manaRegenSpeed = 0.5f;
     public UI ui;
+    public Animator attack;
 
     private void Awake()
     {
         ui = GetComponentInParent<UI>();
+        attack = GameObject.FindGameObjectWithTag("Character").GetComponent<Animator>();
     }
 
     private void Update()
@@ -24,11 +26,11 @@ public class Shooter : MonoBehaviour
         {
             if(ui.currentMana > 1)
             {
+                attack.SetTrigger("Shoot");
                 ui.currentMana -= 1;
                 Rigidbody instantiatedProjectile = Instantiate(projectile, transform.position, transform.rotation) as Rigidbody;
                 instantiatedProjectile.velocity = transform.TransformDirection(new Vector3(0, 0, speed));
                 GameObject.Destroy(instantiatedProjectile.gameObject, 5f);
-                
             }
         }
 

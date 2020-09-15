@@ -9,17 +9,19 @@ public class PlayerController : MonoBehaviour
     public CharacterController controller;
     public LevelBuilder levelBuilder;
     public float speed = 12f;
-
-    private Animator anim;
+    public Animator movement;
 
     //bool isGrounded;
     Vector3 velocity;
 
+    private void Awake()
+    {
+        movement = GameObject.FindGameObjectWithTag("Character").GetComponent<Animator>();
+    }
+
     private void Start()
     {
         levelBuilder = FindObjectOfType<LevelBuilder>();
-        anim = GetComponentInChildren<Animator>();
-        anim.SetInteger("Condition", 0);
     }
 
     /// <summary>
@@ -33,6 +35,15 @@ public class PlayerController : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
         controller.Move(move * speed * Time.deltaTime);
         controller.Move(velocity * Time.deltaTime);
+
+        if(x!=0 || z!=0)
+        {
+            movement.SetBool("Walk", true);
+        }
+        else
+        {
+            movement.SetBool("Walk", false);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
