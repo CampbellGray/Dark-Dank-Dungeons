@@ -205,6 +205,6 @@ public class EquipmentManager : MonoBehaviour
     {
         armour.gameObject.SetActive(true);
         armour.transform.position = itemDropLocation.transform.position;
-        armour.transform.localRotation = new Quaternion(0,0,0,0);
+        armour.transform.localRotation = itemDropLocation.transform.rotation;
     }
 }

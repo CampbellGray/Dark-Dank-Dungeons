@@ -63,4 +63,9 @@ public class UI : MonoBehaviour
     {
         manaImg.fillAmount = currentMana / maxMana;
     }
+
+    public void ApplyDamage()
+    {
+        currentHealth -= 1;
+    }
 }

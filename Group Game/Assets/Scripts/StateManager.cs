@@ -19,8 +19,11 @@ public class StateManager : MonoBehaviour
     public Wander wanderState;
     public Chase chaseState;
     public RandomLoot randomLoot;
+    public Animator movement;
 
     private BehaviourState currentState;
+    private Vector3 curPos;
+    private Vector3 lastPos;
 
     public NavMeshAgent Agent{ get; private set; }
     public Transform Target { get; private set; }
@@ -28,6 +31,7 @@ public class StateManager : MonoBehaviour
     private void Awake()
     {
         randomLoot = GetComponent<RandomLoot>();
+        movement = GetComponentInChildren<Animator>();
         Agent = GetComponent<NavMeshAgent>();
     }
 
@@ -37,6 +41,7 @@ public class StateManager : MonoBehaviour
         {
             SetState(new Wander(this) { ignoreState = wanderState.ignoreState, boundBox = wanderState.boundBox });
         }
+        this.gameObject.GetComponent<Renderer>().material.color = Color.green;
     }
 
     void Update()
@@ -58,6 +63,18 @@ public class StateManager : MonoBehaviour
         {
             currentState.Update();
         }
+
+        curPos = this.gameObject.transform.position;
+
+        if (curPos == lastPos)
+        {
+            movement.SetBool("Walk", false);
+        }
+        else
+        {
+            movement.SetBool("Walk", true);
+        }
+        lastPos = this.gameObject.transform.position;
     }
 
     private void OnDrawGizmos()
@@ -73,6 +90,11 @@ public class StateManager : MonoBehaviour
         {
             wanderState.DrawGizmos();
         }
+    }
+
+    public void Attack()
+    {
+        movement.SetTrigger("Attack");
     }
 
     public void SetState(BehaviourState newState)

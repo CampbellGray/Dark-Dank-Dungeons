@@ -13,6 +13,8 @@ TagManager:
   - Projectile
   - EmptyHealth
   - Character
+  - EnemyAttack
+  - DemonAnim
   layers:
   - Default
   - TransparentFX

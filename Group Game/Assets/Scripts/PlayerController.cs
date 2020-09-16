@@ -52,5 +52,10 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+        else if(other.gameObject.tag == "EnemyAttack")
+        {
+            other.GetComponentInParent<StateManager>().Attack();
+            GetComponent<UI>().ApplyDamage();
+        }
     }
 }
