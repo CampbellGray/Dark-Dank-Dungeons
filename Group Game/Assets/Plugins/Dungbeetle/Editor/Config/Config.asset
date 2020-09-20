@@ -1,0 +1,191 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8395197620360803074
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1800355716, guid: 05a74f59f5144dd43ac112cd0432c9ad, type: 3}
+  m_Name: Default Port
+  m_EditorClassIdentifier: 
+  port: 15275
+--- !u!114 &-6702272234913128713
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 2129302852, guid: 05a74f59f5144dd43ac112cd0432c9ad, type: 3}
+  m_Name: Reporter Config
+  m_EditorClassIdentifier: 
+  Domain: {fileID: 8322351728892973153}
+  Port: {fileID: -8395197620360803074}
+  PubKey: {fileID: -1405599516778494571}
+  Password: {fileID: 6513223907727402892}
+  ProjectId: {fileID: -1727051803489533291}
+--- !u!114 &-2957134802990315550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 120003113, guid: 05a74f59f5144dd43ac112cd0432c9ad, type: 3}
+  m_Name: Default Developer Password
+  m_EditorClassIdentifier: 
+  password: GhCxegf3owvfoio8
+--- !u!114 &-1727051803489533291
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -250092744, guid: 05a74f59f5144dd43ac112cd0432c9ad, type: 3}
+  m_Name: Default Project ID
+  m_EditorClassIdentifier: 
+  projectId: 1
+--- !u!114 &-1504471417657956945
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 746679517, guid: 05a74f59f5144dd43ac112cd0432c9ad, type: 3}
+  m_Name: Default Private Key
+  m_EditorClassIdentifier: 
+  key: <RSAKeyValue><Modulus>hYtGROb6w+UkXacZSemVWxSc8cOKw55XuokateAP012DgwgOXt2Q4k1ehlJmbO1TZF2lFpROdS/CaTKF1B1XRC5KHDJovXEzzHIwSbB+o+e9Qu2SPjVKYTlNzSJ/c2vZeUhGWwXCc7A6Ho0TeAue5y1JySCCTunSvKYMMR0pBe8=</Modulus><Exponent>AQAB</Exponent><P>2jIaVJtSvE1dnovMALNyhXjZKzHwOTTZjt7OpTw92VnJ0Uw621e2xB997wf0lT4grAWiCmuBuarWz7i9yQ02yQ==</P><Q>nK6DmqWs4SaxPh7lf+rAmB2+qmzLOPI766X7aUDQlNMyGa765Li3FByWwzsxzWeDYUoMexMuLyVP87+4AbLa9w==</Q><DP>NqXhzlrwh9Tgo7rjpzFKd39i9NyXC9zeuFe5bcz+uJcyYscy3ojDb69rfRiC+3YJ/MuUYAO5A+Vz06azcc1rcQ==</DP><DQ>ldM3W5Fj4KVMRdfro8eKxatj4LpKFrlkXTGKWRq2minetbqihkawIxY3gJdBR2bdthHGH4a22jR24OILBezO/w==</DQ><InverseQ>s43CBL42SyEEOSVEczKGQ9eyxTxltS2nwK8uE4nfac1EAnlHU2u/p1fzhwWrw+P0omw7GfXkgrgEa109G/C5Ww==</InverseQ><D>KFFWE7NQfhgOFKBASEpXJzpf77XDjS+e+Ngv0j0lSgDvlX23KPjnpwsIwLDb74LvLFwBXYHE9ihHH497TADXuXK6TL5lny/wsYIU5U9/CU5ewkTm5dGYNGQTN/SwjGDx1J938nbKOm1tavg+8Ih9SMC8t4+ZVkXty+auB13oBeE=</D></RSAKeyValue>
+--- !u!114 &-1405599516778494571
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 689193468, guid: 05a74f59f5144dd43ac112cd0432c9ad, type: 3}
+  m_Name: Default Public Key
+  m_EditorClassIdentifier: 
+  key: <RSAKeyValue><Modulus>hYtGROb6w+UkXacZSemVWxSc8cOKw55XuokateAP012DgwgOXt2Q4k1ehlJmbO1TZF2lFpROdS/CaTKF1B1XRC5KHDJovXEzzHIwSbB+o+e9Qu2SPjVKYTlNzSJ/c2vZeUhGWwXCc7A6Ho0TeAue5y1JySCCTunSvKYMMR0pBe8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue>
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1965106395, guid: e88a07578e15d344c934e2554b218a5a, type: 3}
+  m_Name: Config
+  m_EditorClassIdentifier: 
+  defaults: {fileID: 7324741561366093839}
+  reporterClientConfig: {fileID: -6702272234913128713}
+  overviewClientConfig: {fileID: 8538203510218164935}
+  editorServerConfig: {fileID: 1814724590359220086}
+--- !u!114 &1814724590359220086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 480356550, guid: e88a07578e15d344c934e2554b218a5a, type: 3}
+  m_Name: Server Config
+  m_EditorClassIdentifier: 
+  Enabled: {fileID: 6055678254205661229}
+  Port: {fileID: -8395197620360803074}
+  PrivKey: {fileID: -1504471417657956945}
+--- !u!114 &6055678254205661229
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1685840879, guid: e88a07578e15d344c934e2554b218a5a, type: 3}
+  m_Name: Default Enable Editor Server
+  m_EditorClassIdentifier: 
+  value: 1
+--- !u!114 &6513223907727402892
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 120003113, guid: 05a74f59f5144dd43ac112cd0432c9ad, type: 3}
+  m_Name: Default Reporter Password
+  m_EditorClassIdentifier: 
+  password: f9FWv17BvPQ3CVIO
+--- !u!114 &7324741561366093839
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 2042802656, guid: e88a07578e15d344c934e2554b218a5a, type: 3}
+  m_Name: Default Config
+  m_EditorClassIdentifier: 
+  Domain: {fileID: 8322351728892973153}
+  Port: {fileID: -8395197620360803074}
+  PubKey: {fileID: -1405599516778494571}
+  PrivKey: {fileID: -1504471417657956945}
+  ReporterPassword: {fileID: 6513223907727402892}
+  DeveloperPassword: {fileID: -2957134802990315550}
+  ProjectId: {fileID: -1727051803489533291}
+  EditorServerEnabled: {fileID: 6055678254205661229}
+--- !u!114 &8322351728892973153
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -989661039, guid: 05a74f59f5144dd43ac112cd0432c9ad, type: 3}
+  m_Name: Default Domain
+  m_EditorClassIdentifier: 
+  domain: localhost
+--- !u!114 &8538203510218164935
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 2129302852, guid: 05a74f59f5144dd43ac112cd0432c9ad, type: 3}
+  m_Name: Overview Config
+  m_EditorClassIdentifier: 
+  Domain: {fileID: 8322351728892973153}
+  Port: {fileID: -8395197620360803074}
+  PubKey: {fileID: -1405599516778494571}
+  Password: {fileID: -2957134802990315550}
+  ProjectId: {fileID: -1727051803489533291}
