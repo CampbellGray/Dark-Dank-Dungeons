@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class UI : MonoBehaviour
 {
     [Header("Health")]
@@ -52,6 +52,11 @@ public class UI : MonoBehaviour
             currentMana = manaCap;
         }
         UpdateManaBar(currentMana, maxMana);
+
+        if(currentHealth < 0)
+        {
+            currentHealth = 0;
+        }
     }
     public void UpdateHealthBar(float currentHealth, float maxHealth)
     {
@@ -67,5 +72,9 @@ public class UI : MonoBehaviour
     public void ApplyDamage()
     {
         currentHealth -= 1;
+        if(currentHealth == 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 }

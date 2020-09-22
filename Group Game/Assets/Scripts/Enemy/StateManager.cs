@@ -19,6 +19,10 @@ public class StateManager : MonoBehaviour
     public Chase chaseState;
     public RandomLoot randomLoot;
     public Animator movement;
+    public GameObject explosion;
+    public Transform explosionPos;
+    public GameObject attackParticles;
+    public Transform attackParticlesPos;
 
     private BehaviourState currentState;
     private Vector3 curPos;
@@ -94,6 +98,8 @@ public class StateManager : MonoBehaviour
     public void Attack()
     {
         movement.SetTrigger("Attack");
+        GameObject attackParticle = Instantiate(attackParticles, attackParticlesPos.transform.position, attackParticlesPos.transform.rotation);
+        Destroy(attackParticle, 1.5f);
     }
 
     public void SetState(BehaviourState newState)
@@ -122,6 +128,8 @@ public class StateManager : MonoBehaviour
     {
         randomLoot.GetRandomItem();
         Destroy(this.gameObject);
+        GameObject Explosion = Instantiate(explosion, explosionPos.transform.position, explosionPos.transform.rotation);
+        Destroy(Explosion, 1.5f);
     }
 
     private void OnTriggerEnter(Collider other)
