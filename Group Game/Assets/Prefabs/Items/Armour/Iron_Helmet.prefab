@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2915185008127935873
+--- !u!1 &2278380212089910703
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8485379087929736793}
-  - component: {fileID: 4495946216748514179}
+  - component: {fileID: 4104271932420954160}
+  - component: {fileID: 3281396848311016863}
   m_Layer: 0
   m_Name: Spot Light
   m_TagString: Untagged
@@ -17,27 +17,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8485379087929736793
+--- !u!4 &4104271932420954160
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2915185008127935873}
+  m_GameObject: {fileID: 2278380212089910703}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2600495514619662693}
+  m_Father: {fileID: 7151566367921304436}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
---- !u!108 &4495946216748514179
+--- !u!108 &3281396848311016863
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2915185008127935873}
+  m_GameObject: {fileID: 2278380212089910703}
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 0
@@ -91,7 +91,7 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &6001052428062363459
+--- !u!1 &6145425957374467475
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,48 +99,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2600495514619662693}
-  - component: {fileID: 8004761892501255985}
-  - component: {fileID: 2890608812576346361}
-  - component: {fileID: 8722628034509657535}
-  - component: {fileID: 8567272632920577759}
+  - component: {fileID: 7151566367921304436}
+  - component: {fileID: 129640560010149704}
+  - component: {fileID: 2303884485600921059}
+  - component: {fileID: 2493287220601082926}
+  - component: {fileID: 5078019249492262966}
   m_Layer: 0
-  m_Name: Mana_Helmet
+  m_Name: Iron_Helmet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2600495514619662693
+--- !u!4 &7151566367921304436
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6001052428062363459}
+  m_GameObject: {fileID: 6145425957374467475}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 99.99998, y: 100.000015, z: 100}
   m_Children:
-  - {fileID: 8485379087929736793}
+  - {fileID: 4104271932420954160}
+  - {fileID: 9000413654311605982}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!33 &8004761892501255985
+--- !u!33 &129640560010149704
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6001052428062363459}
+  m_GameObject: {fileID: 6145425957374467475}
   m_Mesh: {fileID: -4177034997193590361, guid: 2800b75e910a5ec4493e5b558a6b9d41, type: 3}
---- !u!23 &2890608812576346361
+--- !u!23 &2303884485600921059
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6001052428062363459}
+  m_GameObject: {fileID: 6145425957374467475}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -151,7 +152,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6d95d9929492b4a42af139496964e78a, type: 2}
+  - {fileID: 2100000, guid: b006fa81d98b3e343b06b7614beb20ac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -172,13 +173,13 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &8722628034509657535
+--- !u!114 &2493287220601082926
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6001052428062363459}
+  m_GameObject: {fileID: 6145425957374467475}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 452b1a21e7767ba4a88866b20872f6b3, type: 3}
@@ -186,18 +187,111 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
     type: 1
-    name: Mana_Helmet
+    name: Iron_Helmet
     bonus: 1
---- !u!135 &8567272632920577759
+    index: 1
+--- !u!135 &5078019249492262966
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6001052428062363459}
+  m_GameObject: {fileID: 6145425957374467475}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.01
   m_Center: {x: -0.00000029383094, y: 0.00007804968, z: -0.0002885366}
+--- !u!1 &6668741190991633753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9000413654311605982}
+  - component: {fileID: 8459463360680849019}
+  - component: {fileID: 8669444872294563999}
+  m_Layer: 0
+  m_Name: Item Name
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9000413654311605982
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6668741190991633753}
+  m_LocalRotation: {x: 0.3535531, y: 0.85355353, z: 0.3535535, w: 0.14644642}
+  m_LocalPosition: {x: -0.002, y: -0.016000004, z: 0.034140006}
+  m_LocalScale: {x: 0.50000095, y: 0.5000003, z: 0.50000083}
+  m_Children: []
+  m_Father: {fileID: 7151566367921304436}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -30.000002, y: 144.73601, z: 54.736004}
+--- !u!23 &8459463360680849019
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6668741190991633753}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!102 &8669444872294563999
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6668741190991633753}
+  m_Text: Iron Helmet
+  m_OffsetZ: 0
+  m_CharacterSize: 0.0002
+  m_LineSpacing: 1
+  m_Anchor: 0
+  m_Alignment: 0
+  m_TabSize: 4
+  m_FontSize: 300
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295

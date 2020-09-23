@@ -6,8 +6,9 @@ public class Room : MonoBehaviour
 {
     public Doorway[] doorways;
     public MeshCollider meshCollider;
-    //public Transform[] enemySpawn;
-
+    /// <summary>
+    /// this will return the mesh colliders bounds
+    /// </summary>
     public Bounds RoomBounds
     {
         get { return meshCollider.bounds; }

@@ -31,22 +31,19 @@ public class StateManager : MonoBehaviour
     public NavMeshAgent Agent{ get; private set; }
     public Transform Target { get; private set; }
 
+    /// <summary>
+    /// this gets references to some scritps
+    /// </summary>
     private void Awake()
     {
         randomLoot = GetComponent<RandomLoot>();
         movement = GetComponentInChildren<Animator>();
         Agent = GetComponent<NavMeshAgent>();
     }
-
-    private void Start()
-    {
-        if(initalState == AIState.wander)
-        {
-            SetState(new Wander(this) { ignoreState = wanderState.ignoreState, boundBox = wanderState.boundBox });
-        }
-        this.gameObject.GetComponent<Renderer>().material.color = Color.green;
-    }
-
+    /// <summary>
+    /// if the enemy doesnt have a target but the player is inside of its chase range then it will set that player as its target
+    /// 
+    /// </summary>
     void Update()
     {
         if(Target == null)

@@ -20,7 +20,9 @@ public class MenuTransitions : MonoBehaviour
     {
         Application.Quit();
     }
-
+    /// <summary>
+    /// this will take you back to the main menu
+    /// </summary>
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");

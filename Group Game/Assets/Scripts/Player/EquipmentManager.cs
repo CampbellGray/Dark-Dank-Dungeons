@@ -5,7 +5,6 @@ using UnityEngine;
 public class EquipmentManager : MonoBehaviour
 {
     public Transform itemDropLocation;
-
     public GameObject ironChest;
     public GameObject ironHelmet;
     public GameObject goldenChest;
@@ -32,29 +31,29 @@ public class EquipmentManager : MonoBehaviour
 
     public void EquipArmour(Equipment equipment)
     {
-        if(equipment.data.type == ArmourType.helmet && equipment.data.name == "Iron_Helmet")
+        if (equipment.data.type == ArmourType.helmet && equipment.data.name == "Iron_Helmet")
         {
             SetHelmet(equipment);
             ironHelmet.gameObject.SetActive(true);
-            GetComponent<UI>().healthCap += currentHelmet.data.bonus;
+            UI.healthCap += currentHelmet.data.bonus;
         }
-        else if(equipment.data.type == ArmourType.chest && equipment.data.name == "Iron_Chest")
+        else if (equipment.data.type == ArmourType.chest && equipment.data.name == "Iron_Chest")
         {
             SetChest(equipment);
             ironChest.gameObject.SetActive(true);
-            GetComponent<UI>().healthCap += currentChest.data.bonus;
+            UI.healthCap += currentChest.data.bonus;
         }
         else if (equipment.data.type == ArmourType.helmet && equipment.data.name == "Gold_Helmet")
         {
             SetHelmet(equipment);
             goldenHelmet.gameObject.SetActive(true);
-            GetComponent<UI>().healthCap += currentHelmet.data.bonus;
+            UI.healthCap += currentHelmet.data.bonus;
         }
         else if (equipment.data.type == ArmourType.chest && equipment.data.name == "Gold_Chest")
         {
             SetChest(equipment);
             goldenChest.gameObject.SetActive(true);
-            GetComponent<UI>().healthCap += currentChest.data.bonus;
+            UI.healthCap += currentChest.data.bonus;
         }
         else if (equipment.data.type == ArmourType.helmet && equipment.data.name == "Mana_Helmet")
         {
@@ -110,22 +109,22 @@ public class EquipmentManager : MonoBehaviour
         if (equipment.data.type == ArmourType.helmet && equipment.data.name == "Iron_Helmet")
         {
             ironHelmet.gameObject.SetActive(false);
-            GetComponent<UI>().healthCap -= currentHelmet.data.bonus;
+            UI.healthCap -= currentHelmet.data.bonus;
         }
         else if (equipment.data.type == ArmourType.chest && equipment.data.name == "Iron_Chest")
         {
             ironChest.gameObject.SetActive(false);
-            GetComponent<UI>().healthCap -= currentChest.data.bonus;
+            UI.healthCap -= currentChest.data.bonus;
         }
         else if (equipment.data.type == ArmourType.helmet && equipment.data.name == "Gold_Helmet")
         {
             goldenHelmet.gameObject.SetActive(false);
-            GetComponent<UI>().healthCap -= currentHelmet.data.bonus;
+            UI.healthCap -= currentHelmet.data.bonus;
         }
         else if (equipment.data.type == ArmourType.chest && equipment.data.name == "Gold_Chest")
         {
             goldenChest.gameObject.SetActive(false);
-            GetComponent<UI>().healthCap -= currentChest.data.bonus;
+            UI.healthCap -= currentChest.data.bonus;
         }
         else if (equipment.data.type == ArmourType.helmet && equipment.data.name == "Mana_Helmet")
         {

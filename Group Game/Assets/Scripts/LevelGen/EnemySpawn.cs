@@ -9,7 +9,12 @@ public class EnemySpawn : MonoBehaviour
     public GameObject enemyPrefab;
     public List<Transform> enemySpawnLoc;
     public List<GameObject> enemies;
-
+    /// <summary>
+    /// for every object in the "enemySpawnLoc" list it will spawn in a enemy at their sapwn locations
+    /// set the parent to that spawnlocation
+    /// disable their navmeshagent
+    /// then add them to the "enemies" list
+    /// </summary>
     public void EnemySpawner()
     {
 
@@ -21,7 +26,10 @@ public class EnemySpawn : MonoBehaviour
             enemies.Add(enemy);
         }
     }
-
+    /// <summary>
+    /// for each enemy inside the "enemies" list it will reset their position and rotation
+    /// then enable the navmeshagent
+    /// </summary>
     public void EnemyReposition()
     {
         foreach(GameObject enemy in enemies)
@@ -29,7 +37,6 @@ public class EnemySpawn : MonoBehaviour
             enemy.gameObject.transform.localPosition = new Vector3(0,0,0);
             enemy.gameObject.transform.localRotation = new Quaternion(0,0,0,0);
             enemy.GetComponent<NavMeshAgent>().enabled = true;
-            Debug.Log("enaabled navmeshagent");
         }
     }
 }

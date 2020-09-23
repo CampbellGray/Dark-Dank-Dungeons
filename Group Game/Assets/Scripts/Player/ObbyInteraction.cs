@@ -12,7 +12,7 @@ public class ObbyInteraction : MonoBehaviour
             {
                 if(Score.scoreValue >= 500)
                 {
-                    UI.currentHealth += 1;
+                    UI.currentHealth = UI.healthCap;
                     Score.scoreValue -= 500;
                 }
             }

@@ -7,7 +7,7 @@ public class UI : MonoBehaviour
 {
     [Header("Health")]
     public static float currentHealth = 4;
-    public float healthCap = 4;
+    public static float healthCap = 4;
     public float maxHealth = 4;
     public Image heartImg;
     public Image emptyHeartImg;
