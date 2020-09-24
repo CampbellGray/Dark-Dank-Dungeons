@@ -18,6 +18,9 @@ public class UI : MonoBehaviour
     public float maxMana = 4;
     public Image manaImg;
 
+    public GameObject score;
+    private Score saveHighScore;
+
     private void Awake()
     {
         GameObject heartImgObject = GameObject.FindGameObjectWithTag("Health");
@@ -39,6 +42,7 @@ public class UI : MonoBehaviour
     void Start()
     {
         currentHealth = healthCap;
+        saveHighScore = score.GetComponent<Score>();
     }
     private void Update()
     {
@@ -74,6 +78,7 @@ public class UI : MonoBehaviour
         currentHealth -= 1;
         if(currentHealth == 0)
         {
+            saveHighScore.SaveScoreList();
             SceneManager.LoadScene("GameOver");
         }
     }
