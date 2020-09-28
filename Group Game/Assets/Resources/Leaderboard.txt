@@ -1,6 +1,0 @@
-Leaderboard
-Time Stamp: 24/09/2020 12:53:27 PM - highScore,50
-Time Stamp: 24/09/2020 2:28:11 PM - PLayer one,142
-Time Stamp: 24/09/2020 2:28:12 PM - PLayer two,1142
-Time Stamp: 24/09/2020 2:28:12 PM - PLayer Three,15
-Time Stamp: 24/09/2020 2:28:12 PM - PLayer four,12

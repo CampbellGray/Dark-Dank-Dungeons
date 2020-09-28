@@ -15,6 +15,9 @@ TagManager:
   - Character
   - EnemyAttack
   - DemonAnim
+  - Username
+  - Menu
+  - GameManager
   layers:
   - Default
   - TransparentFX

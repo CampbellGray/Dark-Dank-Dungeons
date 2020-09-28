@@ -19,7 +19,6 @@ public class UI : MonoBehaviour
     public Image manaImg;
 
     public GameObject score;
-    private Score saveHighScore;
 
     private void Awake()
     {
@@ -42,7 +41,6 @@ public class UI : MonoBehaviour
     void Start()
     {
         currentHealth = healthCap;
-        saveHighScore = score.GetComponent<Score>();
     }
     private void Update()
     {
@@ -78,7 +76,7 @@ public class UI : MonoBehaviour
         currentHealth -= 1;
         if(currentHealth == 0)
         {
-            saveHighScore.SaveScoreList();
+            Highscores.AddNewHighscore(PlayerPrefs.GetString("username"), Score.scoreValue);
             SceneManager.LoadScene("GameOver");
         }
     }

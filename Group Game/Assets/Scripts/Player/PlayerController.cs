@@ -11,12 +11,15 @@ public class PlayerController : MonoBehaviour
     public float speed = 12f;
     public Animator movement;
 
+    private HashIDs hash;
+
     //bool isGrounded;
     Vector3 velocity;
 
     private void Awake()
     {
         movement = GameObject.FindGameObjectWithTag("Character").GetComponent<Animator>();
+        hash = GameObject.FindGameObjectWithTag("GameManager").GetComponent<HashIDs>();
     }
 
     private void Start()
@@ -38,11 +41,11 @@ public class PlayerController : MonoBehaviour
 
         if(x!=0 || z!=0)
         {
-            movement.SetBool("Walk", true);
+            movement.SetBool(hash.walkingBool, true);
         }
         else
         {
-            movement.SetBool("Walk", false);
+            movement.SetBool(hash.walkingBool, false);
         }
     }
 

@@ -9,10 +9,13 @@ public class Shooter : MonoBehaviour
     public UI ui;
     public Animator attack;
 
+    private HashIDs hash;
+
     private void Awake()
     {
         ui = GetComponentInParent<UI>();
         attack = GameObject.FindGameObjectWithTag("Character").GetComponent<Animator>();
+        hash = GameObject.FindGameObjectWithTag("GameManager").GetComponent<HashIDs>();
     }
 
     private void Update()
@@ -26,7 +29,7 @@ public class Shooter : MonoBehaviour
         {
             if(ui.currentMana > 1)
             {
-                attack.SetTrigger("Shoot");
+                attack.SetTrigger(hash.attackTringger);
                 ui.currentMana -= 1;
                 Rigidbody instantiatedProjectile = Instantiate(projectile, transform.position, transform.rotation) as Rigidbody;
                 instantiatedProjectile.velocity = transform.TransformDirection(new Vector3(0, 0, speed));

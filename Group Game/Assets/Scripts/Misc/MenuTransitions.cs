@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuTransitions : MonoBehaviour
 {
+    public Text text;
     /// <summary>
     /// This will load the next scene in the game
     /// </summary>
