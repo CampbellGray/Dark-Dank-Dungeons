@@ -2945,7 +2945,7 @@ MonoBehaviour:
   manaCap: 4
   maxMana: 10
   manaImg: {fileID: 0}
-  saveHighScore: {fileID: 0}
+  score: {fileID: 0}
 --- !u!114 &801662734676514761
 MonoBehaviour:
   m_ObjectHideFlags: 0

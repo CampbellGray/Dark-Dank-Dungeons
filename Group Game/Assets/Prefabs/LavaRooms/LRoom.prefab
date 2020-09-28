@@ -407,7 +407,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2f53df88c8ef9714a812d29f2e994e26, type: 2}
+  - {fileID: 2100000, guid: 0fa6b3e2500233b4b8f20cc9b88e9fc7, type: 2}
   - {fileID: 2100000, guid: 22fd161a2e5bc4444a7918136795a792, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -748,6 +748,7 @@ MonoBehaviour:
   - {fileID: 441075864263964821}
   - {fileID: 1664707328}
   - {fileID: 1527493861}
+  enemies: []
 --- !u!1 &8948797699996937920
 GameObject:
   m_ObjectHideFlags: 0

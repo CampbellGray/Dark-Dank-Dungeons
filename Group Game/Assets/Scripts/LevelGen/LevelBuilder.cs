@@ -283,7 +283,8 @@ public class LevelBuilder : MonoBehaviour
         availableDoorways.Clear();
 
         //Reset Coroutine
-        StartCoroutine("GenerateLevel");
+        //StartCoroutine("GenerateLevel");
+        Application.LoadLevel(Application.loadedLevel);
 
     }
 }

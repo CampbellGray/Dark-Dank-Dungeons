@@ -1251,31 +1251,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Start Room
       objectReference: {fileID: 0}
-    - target: {fileID: 5115115588511140744, guid: 18cf9345c5583a1478c2fc1ff4cd3ca4,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5115115588511140744, guid: 18cf9345c5583a1478c2fc1ff4cd3ca4,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.38268322
-      objectReference: {fileID: 0}
-    - target: {fileID: 5115115588511140744, guid: 18cf9345c5583a1478c2fc1ff4cd3ca4,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5115115588511140744, guid: 18cf9345c5583a1478c2fc1ff4cd3ca4,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9238797
-      objectReference: {fileID: 0}
-    - target: {fileID: 5115115588511140744, guid: 18cf9345c5583a1478c2fc1ff4cd3ca4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -45.000004
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18cf9345c5583a1478c2fc1ff4cd3ca4, type: 3}
 --- !u!114 &3460451837672501595
