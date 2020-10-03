@@ -18,6 +18,7 @@ TagManager:
   - Username
   - Menu
   - GameManager
+  - Obby
   layers:
   - Default
   - TransparentFX

@@ -69,7 +69,7 @@ public class LevelBuilder : MonoBehaviour
         player.transform.position = startRoom.playerStart.position;
         player.transform.rotation = startRoom.playerStart.rotation;
 
-        foreach(EnemySpawn enemy in enemySpawnRooms)
+        foreach (EnemySpawn enemy in enemySpawnRooms)
         {
 
             enemy.EnemyReposition();

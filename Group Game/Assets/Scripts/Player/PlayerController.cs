@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     public CharacterController controller;
     public LevelBuilder levelBuilder;
     public float speed = 12f;
     public Animator movement;
+    public GameObject text;
 
     private HashIDs hash;
 
@@ -47,18 +48,42 @@ public class PlayerController : MonoBehaviour
         {
             movement.SetBool(hash.walkingBool, false);
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Exit")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            if(SceneManager.GetActiveScene().buildIndex == 4)
+            {
+                SceneManager.LoadScene(1);
+            }
+            else
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+
         }
         else if(other.gameObject.tag == "EnemyAttack")
         {
             other.GetComponentInParent<StateManager>().Attack();
             GetComponent<UI>().ApplyDamage();
+        }
+        if (other.gameObject.tag == "Obby")
+        {
+            text.GetComponent<TextMesh>().text = "E - Full Health - " + ObbyInteraction.obbyPrice + " Souls";
+            text.gameObject.SetActive(true);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Obby")
+        {
+            text.gameObject.SetActive(false);
         }
     }
 }

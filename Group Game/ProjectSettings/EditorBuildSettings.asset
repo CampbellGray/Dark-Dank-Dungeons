@@ -8,12 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/SewerRooms.unity
+    guid: 405dbc3b1f5031e4581d0903a68e7293
+  - enabled: 1
+    path: Assets/Scenes/CryptRooms.unity
+    guid: 5921c5a444be9a54daf6e5b7555d5af8
+  - enabled: 1
+    path: Assets/Scenes/IceRooms.unity
+    guid: 3ceb6dd09e457ef4eb391e97833f91dd
+  - enabled: 1
+    path: Assets/Scenes/LavaRooms.unity
+    guid: a22e393c1137efc42a44a3b6be7b5bbf
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 3019d559307965748863148c25d4d13f

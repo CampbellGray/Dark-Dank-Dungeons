@@ -6,6 +6,13 @@ public class Equipment : MonoBehaviour
 {
     public ArmourData data;
 
+    public PlayerData playerData;
+
+    private void Awake()
+    {
+        playerData = FindObjectOfType<PlayerData>();
+    }
+
     /// <summary>
     /// if the player is inside of the collider and press E it will call the "Equiparmour" function from the equipment manager script
     /// </summary>
@@ -21,11 +28,13 @@ public class Equipment : MonoBehaviour
                 {
                     inv.TraverseItems(inv.items.root);
                     other.GetComponent<EquipmentManager>().EquipArmour(this);
+                    this.gameObject.transform.parent = playerData.gameObject.transform;
                     Debug.Log(this.data.index);
                 }
                 else 
                 {
                     other.GetComponent<EquipmentManager>().EquipArmour(this);
+                    this.gameObject.transform.parent = playerData.gameObject.transform;
                 }
             }
         }

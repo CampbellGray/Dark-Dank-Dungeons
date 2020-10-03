@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class ObbyInteraction : MonoBehaviour
 {
+
+    public static int obbyPrice = 500;
     private void OnTriggerStay(Collider other)
     {
         if(other.tag == "Player")
         {
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                if(Score.scoreValue >= 500)
+                if(Score.scoreValue >= obbyPrice)
                 {
                     UI.currentHealth = UI.healthCap;
-                    Score.scoreValue -= 500;
+                    Score.scoreValue -= obbyPrice;
+                    obbyPrice += 500;
                 }
             }
         }

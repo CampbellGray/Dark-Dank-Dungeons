@@ -269,6 +269,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &519322642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 519322644}
+  - component: {fileID: 519322643}
+  m_Layer: 0
+  m_Name: PlayerData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &519322643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519322642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9eff521f1c0f1d44a8567c9ed147afb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHelmet: {fileID: 0}
+  currentChest: {fileID: 0}
+  currentStaff: {fileID: 0}
+--- !u!4 &519322644
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519322642}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 406.55295, y: 571.67505, z: -571.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &541510088
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,7 +922,7 @@ MonoBehaviour:
   - {fileID: 1128249057763382295}
   - {fileID: 267030992593528395}
   - {fileID: 3594334448449648389}
-  iterationRange: {x: 25, y: 25}
+  iterationRange: {x: 10, y: 10}
   playerPrefab: {fileID: -3846379077206816638, guid: 945402f885ef79340a6b08f46fa91d0e,
     type: 3}
   enemyPrefab: {fileID: 6131824402695101726, guid: a01c8255c7b1bd64395f2e9525c7193e,
@@ -1135,6 +1181,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Oby Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 3308284736515951713, guid: 45f91710bfb81ee4f9a19dac1af90ca2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obby
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45f91710bfb81ee4f9a19dac1af90ca2, type: 3}

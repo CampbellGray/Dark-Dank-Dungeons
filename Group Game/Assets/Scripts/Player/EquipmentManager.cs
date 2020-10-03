@@ -23,10 +23,27 @@ public class EquipmentManager : MonoBehaviour
     public Equipment currentStaff;
 
     public Shooter shooter;
+    public PlayerData playerData;
 
+    private void Awake()
+    {
+        playerData = FindObjectOfType<PlayerData>();
+    }
     private void Start()
     {
         GetComponent<Shooter>();
+        if (playerData.currentHelmet != null)
+        {
+            EquipArmour(playerData.currentHelmet);
+        }
+        if (playerData.currentChest != null)
+        {
+            EquipArmour(playerData.currentChest);
+        }
+        if (playerData.currentStaff != null)
+        {
+            EquipArmour(playerData.currentStaff);
+        }
     }
 
     public void EquipArmour(Equipment equipment)
@@ -175,6 +192,7 @@ public class EquipmentManager : MonoBehaviour
             UnequipArmour(currentHelmet);
         }
         currentHelmet = helmet;
+        playerData.currentHelmet = helmet;
         helmet.gameObject.SetActive(false);
         
     }
@@ -187,6 +205,7 @@ public class EquipmentManager : MonoBehaviour
             UnequipArmour(currentChest);
         }
         currentChest = chest;
+        playerData.currentChest = chest;
         chest.gameObject.SetActive(false);
     }
     private void SetStaff(Equipment staff)
@@ -197,6 +216,7 @@ public class EquipmentManager : MonoBehaviour
             UnequipArmour(currentStaff);
         }
         currentStaff = staff;
+        playerData.currentStaff = staff;
         staff.gameObject.SetActive(false);
     }
 
