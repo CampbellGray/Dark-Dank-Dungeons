@@ -12,4 +12,11 @@ public class PlayerData : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
     }
+
+    public void GameReset()
+    {
+        currentChest = null;
+        currentHelmet = null;
+        currentStaff = null;
+    }
 }

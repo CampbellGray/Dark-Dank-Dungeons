@@ -72,6 +72,8 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.InputField
     - UnityEngine.UI.Shadow
     - UnityEngine.UI.Text
+    com.unity.multiplayer-hlapi.Runtime.dll:
+    - UnityEngine.Networking.NetworkCallbacks
   sceneClasses:
     Assets/Scenes/CryptRooms.unity:
     - Class: 1
@@ -575,6 +577,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9726}
     - Class: 114
+      Script: {instanceID: 9850}
+    - Class: 114
       Script: {instanceID: 9914}
     - Class: 114
       Script: {instanceID: 9964}
@@ -697,8 +701,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9726}
     - Class: 114
       Script: {instanceID: 9760}
-    - Class: 114
-      Script: {instanceID: 9850}
     - Class: 114
       Script: {instanceID: 9854}
     - Class: 114
@@ -992,7 +994,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 0a7f431f41e5d9f71abc2fc2ac4cd261
+      Hash: 6caef4ac64b2c63b22734f6eab11bc1c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -1094,7 +1096,7 @@ ScriptsOnlyBuild:
     className: SearchTree
   - hash:
       serializedVersion: 2
-      Hash: 088346aee187400f5089911428b6f08f
+      Hash: 71a3a742c2e1c5affb3b2097413f4f53
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UI
@@ -1760,5 +1762,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/IceRooms.unity
   - Assets/Scenes/LavaRooms.unity
   - Assets/Scenes/GameOver.unity
-  playerPath: C:/Users/Campbell/Desktop/Dark-Dank-Dungeons/Group Game/Builds/DarkDankDungneon/Group
-    Game.exe
+  playerPath: C:/Users/Campbell/Desktop/Dark-Dank-Dungeons/Group Game/Builds/V1.0
+    - DarkDankDungeon - AFTER  PLAYETESING/Group Game.exe
