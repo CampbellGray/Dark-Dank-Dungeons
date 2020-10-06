@@ -398,6 +398,8 @@ MonoBehaviour:
   manaRegenSpeed: 0
   ui: {fileID: 0}
   attack: {fileID: 1466030862276971183}
+  equipmanager: {fileID: 0}
+  equipment: {fileID: 0}
 --- !u!114 &1280985060921781056
 MonoBehaviour:
   m_ObjectHideFlags: 0

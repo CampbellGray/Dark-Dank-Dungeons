@@ -283,6 +283,9 @@ MonoBehaviour:
     name: Yellow Staff
     bonus: 2
     index: 3
+    projectileColour: {fileID: 7128618947337882730, guid: 3499f69b4f878d54fb63ba3f30a929f4,
+      type: 3}
+  playerData: {fileID: 0}
 --- !u!65 &7067053062516102644
 BoxCollider:
   m_ObjectHideFlags: 0

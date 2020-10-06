@@ -9,6 +9,9 @@ public class Shooter : MonoBehaviour
     public UI ui;
     public Animator attack;
 
+    public EquipmentManager equipmanager;
+    public Equipment equipment;
+
     private HashIDs hash;
 
     private void Awake()
@@ -16,6 +19,8 @@ public class Shooter : MonoBehaviour
         ui = GetComponentInParent<UI>();
         attack = GameObject.FindGameObjectWithTag("Character").GetComponent<Animator>();
         hash = GameObject.FindGameObjectWithTag("GameManager").GetComponent<HashIDs>();
+        equipmanager = GetComponent<EquipmentManager>();
+        equipment = GetComponent<Equipment>();
     }
 
     private void Update()
