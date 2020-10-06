@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Diagnostics.Tracing;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Video;
 
-public enum AIState { none, wander, chase}
+public enum AIState { none, wander, chase, ranged }
 public class StateManager : MonoBehaviour
 {
     public Transform item;
@@ -17,18 +18,20 @@ public class StateManager : MonoBehaviour
     public AIState initalState = AIState.wander;
     public Wander wanderState;
     public Chase chaseState;
+    public Ranged rangedState; 
     public RandomLoot randomLoot;
     public Animator movement;
     public GameObject explosion;
     public Transform explosionPos;
     public GameObject attackParticles;
     public Transform attackParticlesPos;
+    public Rigidbody enemyProjectile;
 
     private BehaviourState currentState;
     private Vector3 curPos;
     private Vector3 lastPos;
 
-    public NavMeshAgent Agent{ get; private set; }
+    public NavMeshAgent Agent { get; private set; }
     public Transform Target { get; private set; }
 
     /// <summary>
@@ -40,18 +43,19 @@ public class StateManager : MonoBehaviour
         movement = GetComponentInChildren<Animator>();
         Agent = GetComponent<NavMeshAgent>();
     }
+
     /// <summary>
     /// if the enemy doesnt have a target but the player is inside of its chase range then it will set that player as its target
     /// 
     /// </summary>
     void Update()
     {
-        if(Target == null)
+        if (Target == null)
         {
             Collider[] collisions = Physics.OverlapSphere(transform.position, viewRadius);
-            foreach(Collider collider in collisions)
+            foreach (Collider collider in collisions)
             {
-                if(collider.CompareTag("Player") == true)
+                if (collider.CompareTag("Player") == true)
                 {
                     Target = collider.transform;
                     SetState(new Chase(this, currentState));
@@ -59,7 +63,7 @@ public class StateManager : MonoBehaviour
             }
         }
 
-        if(currentState != null)
+        if (currentState != null)
         {
             currentState.Update();
         }
@@ -82,11 +86,11 @@ public class StateManager : MonoBehaviour
         Gizmos.color = Color.magenta;
         Gizmos.DrawWireSphere(transform.position, viewRadius);
 
-        if(currentState != null)
+        if (currentState != null)
         {
             currentState.DrawGizmos();
         }
-        else if(initalState == AIState.wander)
+        else if (initalState == AIState.wander)
         {
             wanderState.DrawGizmos();
         }
@@ -101,14 +105,14 @@ public class StateManager : MonoBehaviour
 
     public void SetState(BehaviourState newState)
     {
-        if(newState.ignoreState == false)
+        if (newState.ignoreState == false)
         {
-            if(currentState != null)
+            if (currentState != null)
             {
                 currentState.Exit();
             }
             currentState = newState;
-            if(sceneText != null)
+            if (sceneText != null)
             {
                 sceneText.text = (currentState.GetType().ToString());
             }
@@ -131,12 +135,20 @@ public class StateManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Projectile")
+        if (other.gameObject.tag == "Projectile")
         {
             Death();
         }
     }
+
+    public void FireProjectile()
+    {
+        Rigidbody instantiatedProjectile = Instantiate(enemyProjectile, transform.position, transform.rotation) as Rigidbody;
+        instantiatedProjectile.velocity = transform.TransformDirection(new Vector3(0, 0, rangedState.projectileSpeed));
+        Destroy(instantiatedProjectile.gameObject, rangedState.destroyAfterTime);
+    }
 }
+
 [System.Serializable]
 public abstract class BehaviourState
 {
@@ -176,7 +188,7 @@ public class Wander : BehaviourState
 
     public override void Update()
     {
-        if(targetPos != null)
+        if (targetPos != null)
         {
             //if AI has a target switch state
             distance = Vector3.Distance(stateManager.transform.position, (Vector3)targetPos);
@@ -189,7 +201,7 @@ public class Wander : BehaviourState
 
     public override void Exit()
     {
-        
+
     }
 
     public override void DrawGizmos()
@@ -197,7 +209,7 @@ public class Wander : BehaviourState
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireCube(boundBox.center, boundBox.size);
         Gizmos.color = Color.red;
-        if(targetPos != null)
+        if (targetPos != null)
         {
             Gizmos.DrawSphere((Vector3)targetPos, 0.5f);
         }
@@ -207,7 +219,7 @@ public class Wander : BehaviourState
     {
         float randomx = Random.Range(-boundBox.extents.x, boundBox.extents.x) + boundBox.center.x;
         float randomz = Random.Range(-boundBox.extents.z, boundBox.extents.z) + boundBox.center.z;
-        Vector3 randomVector = new Vector3(randomx,stateManager.transform.position.y + boundBox.center.y, randomz);
+        Vector3 randomVector = new Vector3(randomx, stateManager.transform.position.y + boundBox.center.y, randomz);
         //if(boundBox.Contains(randomVector) == false)
         //{
         //    randomVector = GetRandomPointInBounds();
@@ -232,6 +244,7 @@ public class Chase : BehaviourState
     {
 
     }
+
     public Chase(StateManager sm, BehaviourState prev) : base(sm)
     {
         prevState = prev;
@@ -245,10 +258,10 @@ public class Chase : BehaviourState
 
     public override void Update()
     {
-        if(stateManager.Target != null)
+        if (stateManager.Target != null)
         {
             distance = Vector3.Distance(stateManager.transform.position, stateManager.Target.position);
-            if(distance <= stateManager.Agent.stoppingDistance)
+            if (distance <= stateManager.Agent.stoppingDistance)
             {
 
             }
@@ -267,10 +280,41 @@ public class Chase : BehaviourState
         }
         else
         {
-            if(prevState != null)
+            if (prevState != null)
             {
                 stateManager.SetState(prevState);
             }
+        }
+    }
+}
+
+public class Ranged : BehaviourState
+{
+    public float projectileSpeed = 40;
+    public float destroyAfterTime = 0.5f;
+
+    public Ranged(StateManager sm) : base(sm)
+    {
+
+    }
+
+    public Ranged(StateManager sm, BehaviourState prev) : base(sm)
+    {
+        prevState = prev;
+    }
+
+    public override void Initialize()
+    {
+
+    }
+
+    public override void Update()
+    {
+        int fireSpeed = Random.Range(0, 100);
+
+        if(fireSpeed == 1)
+        {
+            stateManager.FireProjectile();
         }
     }
 }
