@@ -296,3 +296,6 @@ MonoBehaviour:
     name: Green Staff
     bonus: 0.5
     index: 3
+    projectileColour: {fileID: 7128618947337882730, guid: e8e733256f69b9e4da23c16278e87bb9,
+      type: 3}
+  playerData: {fileID: 0}

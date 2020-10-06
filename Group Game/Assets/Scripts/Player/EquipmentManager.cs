@@ -101,24 +101,33 @@ public class EquipmentManager : MonoBehaviour
             SetStaff(equipment);
             greenStaff.gameObject.SetActive(true);
             shooter.manaRegenSpeed += currentStaff.data.bonus;
+            shooter.projectile = equipment.data.projectileColour;
+            Debug.Log(shooter.projectile);
+            Debug.Log(equipment.data.projectileColour);
         }
         else if (equipment.data.type == ArmourType.staff && equipment.data.name == "Blue Staff")
         {
             SetStaff(equipment);
             blueStaff.gameObject.SetActive(true);
             shooter.manaRegenSpeed += currentStaff.data.bonus;
+            shooter.projectile = equipment.data.projectileColour;
+            Debug.Log(shooter.projectile);
         }
         else if (equipment.data.type == ArmourType.staff && equipment.data.name == "Yellow Staff")
         {
             SetStaff(equipment);
             yellowStaff.gameObject.SetActive(true);
             shooter.manaRegenSpeed += currentStaff.data.bonus;
+            shooter.projectile = equipment.data.projectileColour;
+            Debug.Log(shooter.projectile);
         }
         else if (equipment.data.type == ArmourType.staff && equipment.data.name == "Purple Staff")
         {
             SetStaff(equipment);
             purpleStaff.gameObject.SetActive(true);
             shooter.manaRegenSpeed += currentStaff.data.bonus;
+            shooter.projectile = equipment.data.projectileColour;
+            Debug.Log(shooter.projectile);
         }
     }
     public void UnequipArmour(Equipment equipment)
