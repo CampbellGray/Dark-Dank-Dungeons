@@ -113,6 +113,9 @@ MonoBehaviour:
     name: Purple Staff
     bonus: 3
     index: 3
+    projectileColour: {fileID: 7128618947337882730, guid: a2672103c9b7d754b9f977d18705191a,
+      type: 3}
+  playerData: {fileID: 0}
 --- !u!1 &5368353086018638829
 GameObject:
   m_ObjectHideFlags: 0

@@ -52,4 +52,5 @@ public struct ArmourData
     public string name;
     public float bonus;
     public int index;
+    public Rigidbody projectileColour;
 }

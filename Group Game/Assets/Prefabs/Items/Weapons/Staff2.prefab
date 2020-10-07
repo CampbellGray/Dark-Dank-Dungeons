@@ -191,6 +191,9 @@ MonoBehaviour:
     name: Blue Staff
     bonus: 1
     index: 3
+    projectileColour: {fileID: 7128618947337882730, guid: 09003b871062472468065c4f4975d48d,
+      type: 3}
+  playerData: {fileID: 0}
 --- !u!65 &2439132084547184668
 BoxCollider:
   m_ObjectHideFlags: 0

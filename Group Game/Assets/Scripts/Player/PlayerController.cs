@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 12f;
     public Animator movement;
     public GameObject text;
+    public PlayerData playerData;
 
     private HashIDs hash;
 
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        playerData = GameObject.FindGameObjectWithTag("PlayerData").GetComponent<PlayerData>();
         movement = GameObject.FindGameObjectWithTag("Character").GetComponent<Animator>();
         hash = GameObject.FindGameObjectWithTag("GameManager").GetComponent<HashIDs>();
     }
@@ -65,6 +67,14 @@ public class PlayerController : MonoBehaviour
             else
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                for(int i = 0; i < playerData.transform.childCount; i++)
+                {
+                    var child = playerData.transform.GetChild(i).gameObject;
+                    if(child != null)
+                    {
+                        child.SetActive(false);
+                    }
+                }
             }
 
         }
