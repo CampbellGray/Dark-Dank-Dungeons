@@ -307,6 +307,7 @@ MonoBehaviour:
   attackParticles: {fileID: 1314578611642816579, guid: 5154f0adbde753247b54600e063e8fc6,
     type: 3}
   attackParticlesPos: {fileID: 1476003386439236090}
+  enemyProjectile: {fileID: 0}
 --- !u!114 &8280484265818650893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,6 +382,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6131824402695101731}
     m_Modifications:
+    - target: {fileID: -7780734103960978560, guid: a55633ce6f1444d4db365c1fad033310,
+        type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 90cdb22c924d6854e92dd996d58a5abf, type: 2}
     - target: {fileID: -6057140222963153312, guid: a55633ce6f1444d4db365c1fad033310,
         type: 3}
       propertyPath: m_Controller
@@ -390,7 +396,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7e3382e0fb3b85541adc5572da50f148, type: 2}
+      objectReference: {fileID: 2100000, guid: 239e47a21fbecc148bd91334d35f66c3, type: 2}
     - target: {fileID: -4216859302048453862, guid: a55633ce6f1444d4db365c1fad033310,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -475,7 +481,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 51f56a148ebcfb342a8417ad9bdc7625, type: 2}
+      objectReference: {fileID: 2100000, guid: 13e972715382c004bb3b5aec063ab882, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a55633ce6f1444d4db365c1fad033310, type: 3}
 --- !u!4 &8306317955041524337 stripped
