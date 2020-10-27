@@ -18,6 +18,10 @@ public class StateManager : MonoBehaviour
     public AIState initalState = AIState.wander;
     public Wander wanderState;
     public Chase chaseState;
+<<<<<<< HEAD
+=======
+    //public Ranged rangedState; 
+>>>>>>> 2d18a857934d4f8b23f3a4a980fe623b423f934b
     public RandomLoot randomLoot;
     public Animator movement;
     public GameObject explosion;
@@ -25,6 +29,10 @@ public class StateManager : MonoBehaviour
     public GameObject attackParticles;
     public Transform attackParticlesPos;
     public Rigidbody enemyProjectile;
+<<<<<<< HEAD
+=======
+    //public EnemyShooting es;
+>>>>>>> 2d18a857934d4f8b23f3a4a980fe623b423f934b
 
     private BehaviourState currentState;
     private Vector3 curPos;
@@ -42,6 +50,13 @@ public class StateManager : MonoBehaviour
         movement = GetComponentInChildren<Animator>();
         Agent = GetComponent<NavMeshAgent>();
 
+<<<<<<< HEAD
+=======
+        //if(currentState == rangedState)
+        //{
+        //    es = GetComponent<EnemyShooting>();
+        //}
+>>>>>>> 2d18a857934d4f8b23f3a4a980fe623b423f934b
     }
 
     /// <summary>
@@ -140,6 +155,16 @@ public class StateManager : MonoBehaviour
             Death();
         }
     }
+<<<<<<< HEAD
+=======
+
+    //public void FireProjectile()
+    //{
+    //    Rigidbody instantiatedProjectile = Instantiate(enemyProjectile, transform.position, transform.rotation) as Rigidbody;
+    //    instantiatedProjectile.velocity = transform.TransformDirection(new Vector3(0, 0, rangedState.projectileSpeed));
+    //    Destroy(instantiatedProjectile.gameObject, rangedState.destroyAfterTime);
+    //}
+>>>>>>> 2d18a857934d4f8b23f3a4a980fe623b423f934b
 }
 
 [System.Serializable]
@@ -279,4 +304,34 @@ public class Chase : BehaviourState
             }
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+
+//public class Ranged : BehaviourState
+//{
+//    public float projectileSpeed = 40;
+//    public float destroyAfterTime = 0.5f;
+
+//    public Ranged(StateManager sm) : base(sm)
+//    {
+
+//    }
+
+//    public Ranged(StateManager sm, BehaviourState prev) : base(sm)
+//    {
+//        prevState = prev;
+//    }
+
+//    public override void Initialize()
+//    {
+
+//    }
+
+//    public override void Update()
+//    {
+//        stateManager.es.Shoot();
+//    }
+//}
+>>>>>>> 2d18a857934d4f8b23f3a4a980fe623b423f934b

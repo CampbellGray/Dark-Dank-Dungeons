@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/RaveDungeon.unity
+=======
+- path: Assets/Scenes/LavaRooms.unity
+>>>>>>> 2d18a857934d4f8b23f3a4a980fe623b423f934b
   isLoaded: 1
   isActive: 1
   isSubScene: 0
