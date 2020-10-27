@@ -18,7 +18,6 @@ public class StateManager : MonoBehaviour
     public AIState initalState = AIState.wander;
     public Wander wanderState;
     public Chase chaseState;
-    public Ranged rangedState; 
     public RandomLoot randomLoot;
     public Animator movement;
     public GameObject explosion;
@@ -26,7 +25,6 @@ public class StateManager : MonoBehaviour
     public GameObject attackParticles;
     public Transform attackParticlesPos;
     public Rigidbody enemyProjectile;
-    public EnemyShooting es;
 
     private BehaviourState currentState;
     private Vector3 curPos;
@@ -44,10 +42,6 @@ public class StateManager : MonoBehaviour
         movement = GetComponentInChildren<Animator>();
         Agent = GetComponent<NavMeshAgent>();
 
-        if(currentState == rangedState)
-        {
-            es = GetComponent<EnemyShooting>();
-        }
     }
 
     /// <summary>
@@ -64,7 +58,7 @@ public class StateManager : MonoBehaviour
                 if (collider.CompareTag("Player") == true)
                 {
                     Target = collider.transform;
-                    SetState(new Chase(this, currentState));
+                    //SetState(new Chase(this, currentState));
                 }
             }
         }
@@ -78,11 +72,11 @@ public class StateManager : MonoBehaviour
 
         if (curPos == lastPos)
         {
-            movement.SetBool("Walk", false);
+            //movement.SetBool("Walk", false);
         }
         else
         {
-            movement.SetBool("Walk", true);
+            //movement.SetBool("Walk", true);
         }
         lastPos = this.gameObject.transform.position;
     }
@@ -145,13 +139,6 @@ public class StateManager : MonoBehaviour
         {
             Death();
         }
-    }
-
-    public void FireProjectile()
-    {
-        Rigidbody instantiatedProjectile = Instantiate(enemyProjectile, transform.position, transform.rotation) as Rigidbody;
-        instantiatedProjectile.velocity = transform.TransformDirection(new Vector3(0, 0, rangedState.projectileSpeed));
-        Destroy(instantiatedProjectile.gameObject, rangedState.destroyAfterTime);
     }
 }
 
@@ -291,31 +278,5 @@ public class Chase : BehaviourState
                 stateManager.SetState(prevState);
             }
         }
-    }
-}
-
-public class Ranged : BehaviourState
-{
-    public float projectileSpeed = 40;
-    public float destroyAfterTime = 0.5f;
-
-    public Ranged(StateManager sm) : base(sm)
-    {
-
-    }
-
-    public Ranged(StateManager sm, BehaviourState prev) : base(sm)
-    {
-        prevState = prev;
-    }
-
-    public override void Initialize()
-    {
-
-    }
-
-    public override void Update()
-    {
-        stateManager.es.Shoot();
     }
 }
