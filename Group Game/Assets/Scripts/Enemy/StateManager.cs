@@ -40,8 +40,6 @@ public class StateManager : MonoBehaviour
         randomLoot = GetComponent<RandomLoot>();
         movement = GetComponentInChildren<Animator>();
         Agent = GetComponent<NavMeshAgent>();
-
-
     }
 
     /// <summary>
