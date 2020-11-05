@@ -26,7 +26,6 @@ public class StateManager : MonoBehaviour
     public GameObject attackParticles;
     public Transform attackParticlesPos;
     public Rigidbody enemyProjectile;
-    public EnemyShooting es;
 
     private BehaviourState currentState;
     private Vector3 curPos;
@@ -43,11 +42,6 @@ public class StateManager : MonoBehaviour
         randomLoot = GetComponent<RandomLoot>();
         movement = GetComponentInChildren<Animator>();
         Agent = GetComponent<NavMeshAgent>();
-
-        if(currentState == rangedState)
-        {
-            es = GetComponent<EnemyShooting>();
-        }
     }
 
     /// <summary>
@@ -316,6 +310,6 @@ public class Ranged : BehaviourState
 
     public override void Update()
     {
-        stateManager.es.Shoot();
+
     }
 }
