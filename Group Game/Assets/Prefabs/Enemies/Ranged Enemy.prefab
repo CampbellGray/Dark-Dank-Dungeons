@@ -199,6 +199,7 @@ MonoBehaviour:
     type: 3}
   speed: 40
   destroyAfterTime: 0.5
+  sm: {fileID: 6131824402695101726}
 --- !u!1 &6131824402695101721
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,7 +339,7 @@ MonoBehaviour:
   item: {fileID: 613802999140961813, guid: 2947fa79a2b05c145a202a28d715e81e, type: 3}
   viewRadius: 10
   sceneText: {fileID: 0}
-  initalState: 3
+  initalState: 2
   wanderState:
     ignoreState: 1
     boundBox:
@@ -347,7 +348,7 @@ MonoBehaviour:
   chaseState:
     ignoreState: 0
     chaseSpeed: 10
-  randomLoot: {fileID: 0}
+  randomLoot: {fileID: 8280484265818650893}
   movement: {fileID: 3973909969779725713}
   explosion: {fileID: 9139845911046467956, guid: 00f0cbd1eaf9cf44e8bf881197df8652,
     type: 3}
@@ -355,9 +356,6 @@ MonoBehaviour:
   attackParticles: {fileID: 1314578611642816579, guid: 5154f0adbde753247b54600e063e8fc6,
     type: 3}
   attackParticlesPos: {fileID: 1476003386439236090}
-  enemyProjectile: {fileID: 7128618947337882730, guid: a1b1bb128b7937443b23aa587b9e2c38,
-    type: 3}
-  es: {fileID: 8255878016632691051}
 --- !u!114 &8280484265818650893
 MonoBehaviour:
   m_ObjectHideFlags: 0
