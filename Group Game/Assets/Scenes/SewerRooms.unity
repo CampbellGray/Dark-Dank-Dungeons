@@ -876,7 +876,7 @@ MonoBehaviour:
   - {fileID: 1128249057763382295}
   - {fileID: 6102162436161777346}
   - {fileID: 3594334448449648389}
-  iterationRange: {x: 10, y: 10}
+  iterationRange: {x: 3, y: 7}
   playerPrefab: {fileID: -3846379077206816638, guid: 945402f885ef79340a6b08f46fa91d0e,
     type: 3}
   enemyPrefab: {fileID: 6131824402695101726, guid: a01c8255c7b1bd64395f2e9525c7193e,
@@ -1064,11 +1064,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 541510089}
     m_Modifications:
-    - target: {fileID: 2225127449225712629, guid: 45f91710bfb81ee4f9a19dac1af90ca2,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8edba80cc2a312044835fa43a96dc547, type: 2}
     - target: {fileID: 2526143626931081924, guid: 45f91710bfb81ee4f9a19dac1af90ca2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1234,11 +1229,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: +Room
       objectReference: {fileID: 0}
-    - target: {fileID: 2976071627784320220, guid: dfb1c021f6eac2a4f923a7db9c8df1e4,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0a9bfc68cb97e744ba4472ace6580714, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfb1c021f6eac2a4f923a7db9c8df1e4, type: 3}
 --- !u!114 &3445693221002839861 stripped
@@ -1561,11 +1551,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4118128517259538877, guid: 98a2d680d711e864f991480506384817,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b8ee9fb539db0184c8bcb4c138935696, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98a2d680d711e864f991480506384817, type: 3}
 --- !u!114 &6102162436161777346 stripped
@@ -1695,11 +1680,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LRoom
       objectReference: {fileID: 0}
-    - target: {fileID: 7141407439429980229, guid: d051a5dd07c7efa45bdcaa32c9d90a75,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b8ee9fb539db0184c8bcb4c138935696, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d051a5dd07c7efa45bdcaa32c9d90a75, type: 3}
 --- !u!4 &8272508076638334662 stripped
@@ -1799,11 +1779,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9050562488102205146, guid: 20cc0983719c0de4ca92f7fb75c38784,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8edba80cc2a312044835fa43a96dc547, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20cc0983719c0de4ca92f7fb75c38784, type: 3}
 --- !u!114 &8972480298728296283 stripped
