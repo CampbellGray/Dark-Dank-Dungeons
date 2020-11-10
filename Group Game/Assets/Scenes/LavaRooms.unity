@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -284,7 +284,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &541510089
 Transform:
   m_ObjectHideFlags: 0
@@ -852,7 +852,7 @@ MonoBehaviour:
   - {fileID: 5131988685062483306}
   - {fileID: 7380409103593753822}
   - {fileID: 8943579436119589435}
-  iterationRange: {x: 25, y: 25}
+  iterationRange: {x: 3, y: 7}
   playerPrefab: {fileID: -3846379077206816638, guid: 945402f885ef79340a6b08f46fa91d0e,
     type: 3}
   enemyPrefab: {fileID: 6131824402695101726, guid: a01c8255c7b1bd64395f2e9525c7193e,

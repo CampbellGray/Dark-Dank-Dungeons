@@ -1099,7 +1099,7 @@ MonoBehaviour:
   - {fileID: 762614189}
   - {fileID: 267030992593528395}
   - {fileID: 3594334448449648389}
-  iterationRange: {x: 25, y: 25}
+  iterationRange: {x: 3, y: 7}
   playerPrefab: {fileID: -3846379077206816638, guid: 945402f885ef79340a6b08f46fa91d0e,
     type: 3}
   enemyPrefab: {fileID: 6131824402695101726, guid: a01c8255c7b1bd64395f2e9525c7193e,

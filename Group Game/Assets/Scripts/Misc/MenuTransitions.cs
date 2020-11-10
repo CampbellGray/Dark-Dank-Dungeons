@@ -36,7 +36,7 @@ public class MenuTransitions : MonoBehaviour
 
     IEnumerator DelayLoadLevel(int index)
     {
-        anim.SetTrigger("TriggerTransition");
+        //anim.SetTrigger("TriggerTransition");
         yield return new WaitForSeconds(transitionDelayTime);
         SceneManager.LoadScene(index);
     }

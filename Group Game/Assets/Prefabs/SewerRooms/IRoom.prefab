@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22ea7b7accd343544a5b5ccf6e41d370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 6131824402695101721, guid: acc0af9f5debb524ab78f05320ae337e,
+  enemyPrefab: {fileID: 6131824402695101721, guid: 6ad765388832b6146abe00d2f39bf00b,
     type: 3}
   enemySpawnLoc:
   - {fileID: 5456430939191024149}
@@ -897,7 +897,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 674ee2f93a79c2146aba66d055bd6b40, type: 2}
+      objectReference: {fileID: 2100000, guid: b8ee9fb539db0184c8bcb4c138935696, type: 2}
     - target: {fileID: -1504981713932161579, guid: a454d31c38cef84439f92104e3f38494,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
