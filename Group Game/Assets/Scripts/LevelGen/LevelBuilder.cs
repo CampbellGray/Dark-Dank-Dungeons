@@ -142,6 +142,7 @@ public class LevelBuilder : MonoBehaviour
                 availableDoorways.Remove(availableDoorway);
 
                 //Spawns in the enemy in the room
+                Debug.Log(currentRoom);
                 currentRoom.GetComponent<EnemySpawn>().EnemySpawner();
                 
                 enemySpawnRooms.Add(currentRoom.GetComponent<EnemySpawn>());
