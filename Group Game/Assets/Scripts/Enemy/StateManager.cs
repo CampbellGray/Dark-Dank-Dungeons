@@ -31,6 +31,10 @@ public class StateManager : MonoBehaviour
     private Vector3 curPos;
     private Vector3 lastPos;
 
+    AudioSource audioSource;
+
+    public AudioClip attackSound;
+
     public NavMeshAgent Agent { get; private set; }
     public Transform Target { get; private set; }
 
@@ -42,6 +46,7 @@ public class StateManager : MonoBehaviour
         randomLoot = GetComponent<RandomLoot>();
         movement = GetComponentInChildren<Animator>();
         Agent = GetComponent<NavMeshAgent>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     /// <summary>
@@ -99,6 +104,7 @@ public class StateManager : MonoBehaviour
     public void Attack()
     {
         movement.SetTrigger("Attack");
+        audioSource.PlayOneShot(attackSound, 1F);
         GameObject attackParticle = Instantiate(attackParticles, attackParticlesPos.transform.position, attackParticlesPos.transform.rotation);
         Destroy(attackParticle, 1.5f);
     }

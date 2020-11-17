@@ -154,6 +154,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cec11646e88d69d4ebe8cc068b75baff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectileSound: {fileID: 1534595105903095276, guid: 9afed01e49532044da0b68d76a97ab5d,
+    type: 3}
+  impact: {fileID: 0}
 --- !u!1 &8411557685475825210
 GameObject:
   m_ObjectHideFlags: 0

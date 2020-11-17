@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
 
     private HashIDs hash;
 
+    public AudioSource audioSource;
+
     //bool isGrounded;
     Vector3 velocity;
 
@@ -45,10 +47,12 @@ public class PlayerController : MonoBehaviour
         if(x!=0 || z!=0)
         {
             movement.SetBool(hash.walkingBool, true);
+            
         }
         else
         {
             movement.SetBool(hash.walkingBool, false);
+            audioSource.Play();
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
