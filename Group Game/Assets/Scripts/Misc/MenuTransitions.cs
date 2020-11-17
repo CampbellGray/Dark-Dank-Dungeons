@@ -15,9 +15,17 @@ public class MenuTransitions : MonoBehaviour
     /// </summary>
     public void PlayGame()
     {
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+
+        if (currentScene == 1)
+        {
+            Score.scoreValue = 0;
+        }
+
         StartCoroutine(DelayLoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
-        Score.scoreValue = 0;
+        
     }
+
     /// <summary>
     /// This will close the game 
     /// </summary>
@@ -34,9 +42,9 @@ public class MenuTransitions : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    IEnumerator DelayLoadLevel(int index)
+    public IEnumerator DelayLoadLevel(int index)
     {
-        //anim.SetTrigger("TriggerTransition");
+        anim.SetTrigger("Transition");
         yield return new WaitForSeconds(transitionDelayTime);
         SceneManager.LoadScene(index);
     }

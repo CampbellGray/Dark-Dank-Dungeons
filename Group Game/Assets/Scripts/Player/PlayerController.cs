@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public Animator movement;
     public GameObject text;
     public PlayerData playerData;
+    public MenuTransitions mt;
 
     private HashIDs hash;
 
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         levelBuilder = FindObjectOfType<LevelBuilder>();
+        mt = GameObject.Find("MenuTransitions").GetComponent<MenuTransitions>();
     }
 
     /// <summary>
@@ -66,7 +68,8 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                mt.PlayGame();
+
                 for(int i = 0; i < playerData.transform.childCount; i++)
                 {
                     var child = playerData.transform.GetChild(i).gameObject;
