@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    public GameObject projectileSound;
+
     private void OnTriggerExit(Collider other)
     {
         if(other.tag == "Wall")
         {
+            Instantiate(projectileSound, transform.position, transform.rotation);
+            Destroy(projectileSound, 5f);
+            gameObject.SetActive(false);
             Destroy(this.gameObject);
         }
     }
@@ -16,7 +21,10 @@ public class Projectile : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
-            Destroy(this.gameObject);
+            Instantiate(projectileSound, transform.position, transform.rotation);
+            Destroy(projectileSound, 5f);
+            gameObject.SetActive(false);
+            Destroy(this.gameObject);           
             Score.scoreValue += 50;
         }
     }

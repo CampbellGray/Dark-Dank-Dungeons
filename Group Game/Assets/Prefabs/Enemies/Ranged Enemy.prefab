@@ -199,6 +199,7 @@ MonoBehaviour:
     type: 3}
   speed: 40
   destroyAfterTime: 0.5
+  sm: {fileID: 6131824402695101726}
 --- !u!1 &6131824402695101721
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,8 +356,6 @@ MonoBehaviour:
   attackParticles: {fileID: 1314578611642816579, guid: 5154f0adbde753247b54600e063e8fc6,
     type: 3}
   attackParticlesPos: {fileID: 1476003386439236090}
-  enemyProjectile: {fileID: 7128618947337882730, guid: a1b1bb128b7937443b23aa587b9e2c38,
-    type: 3}
 --- !u!114 &8280484265818650893
 MonoBehaviour:
   m_ObjectHideFlags: 0

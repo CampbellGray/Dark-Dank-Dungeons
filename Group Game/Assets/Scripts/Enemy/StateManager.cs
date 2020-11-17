@@ -18,16 +18,22 @@ public class StateManager : MonoBehaviour
     public AIState initalState = AIState.wander;
     public Wander wanderState;
     public Chase chaseState;
+    public Ranged rangedState; 
     public RandomLoot randomLoot;
     public Animator movement;
     public GameObject explosion;
     public Transform explosionPos;
     public GameObject attackParticles;
     public Transform attackParticlesPos;
+    public Rigidbody enemyProjectile;
 
     private BehaviourState currentState;
     private Vector3 curPos;
     private Vector3 lastPos;
+
+    AudioSource audioSource;
+
+    public AudioClip attackSound;
 
     public NavMeshAgent Agent { get; private set; }
     public Transform Target { get; private set; }
@@ -40,8 +46,7 @@ public class StateManager : MonoBehaviour
         randomLoot = GetComponent<RandomLoot>();
         movement = GetComponentInChildren<Animator>();
         Agent = GetComponent<NavMeshAgent>();
-
-
+        audioSource = GetComponent<AudioSource>();
     }
 
     /// <summary>
@@ -58,7 +63,7 @@ public class StateManager : MonoBehaviour
                 if (collider.CompareTag("Player") == true)
                 {
                     Target = collider.transform;
-                    //SetState(new Chase(this, currentState));
+                    SetState(new Chase(this, currentState));
                 }
             }
         }
@@ -72,11 +77,11 @@ public class StateManager : MonoBehaviour
 
         if (curPos == lastPos)
         {
-            //movement.SetBool("Walk", false);
+            movement.SetBool("Walk", false);
         }
         else
         {
-            //movement.SetBool("Walk", true);
+            movement.SetBool("Walk", true);
         }
         lastPos = this.gameObject.transform.position;
     }
@@ -99,6 +104,7 @@ public class StateManager : MonoBehaviour
     public void Attack()
     {
         movement.SetTrigger("Attack");
+        audioSource.PlayOneShot(attackSound, 1F);
         GameObject attackParticle = Instantiate(attackParticles, attackParticlesPos.transform.position, attackParticlesPos.transform.rotation);
         Destroy(attackParticle, 1.5f);
     }
@@ -139,6 +145,13 @@ public class StateManager : MonoBehaviour
         {
             Death();
         }
+    }
+
+    public void FireProjectile()
+    {
+        Rigidbody instantiatedProjectile = Instantiate(enemyProjectile, transform.position, transform.rotation) as Rigidbody;
+        instantiatedProjectile.velocity = transform.TransformDirection(new Vector3(0, 0, rangedState.projectileSpeed));
+        Destroy(instantiatedProjectile.gameObject, rangedState.destroyAfterTime);
     }
 }
 
@@ -281,3 +294,28 @@ public class Chase : BehaviourState
     }
 }
 
+public class Ranged : BehaviourState
+{
+    public float projectileSpeed = 40;
+    public float destroyAfterTime = 0.5f;
+
+    public Ranged(StateManager sm) : base(sm)
+    {
+
+    }
+
+    public Ranged(StateManager sm, BehaviourState prev) : base(sm)
+    {
+        prevState = prev;
+    }
+
+    public override void Initialize()
+    {
+
+    }
+
+    public override void Update()
+    {
+
+    }
+}
