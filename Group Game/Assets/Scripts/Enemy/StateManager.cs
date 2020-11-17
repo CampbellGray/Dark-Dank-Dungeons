@@ -35,6 +35,8 @@ public class StateManager : MonoBehaviour
 
     public AudioClip attackSound;
 
+    public GameObject deathSound;
+
     public NavMeshAgent Agent { get; private set; }
     public Transform Target { get; private set; }
 
@@ -134,6 +136,9 @@ public class StateManager : MonoBehaviour
     public void Death()
     {
         randomLoot.GetRandomItem();
+        Instantiate(deathSound, transform.position, transform.rotation);
+        Destroy(deathSound, 5f);
+        gameObject.SetActive(false);
         Destroy(this.gameObject);
         GameObject Explosion = Instantiate(explosion, explosionPos.transform.position, explosionPos.transform.rotation);
         Destroy(Explosion, 1.5f);

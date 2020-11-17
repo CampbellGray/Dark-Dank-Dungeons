@@ -310,6 +310,8 @@ MonoBehaviour:
   attackParticlesPos: {fileID: 1476003386439236090}
   enemyProjectile: {fileID: 0}
   attackSound: {fileID: 8300000, guid: 41298c1882280b84199f74915c202f03, type: 3}
+  deathSound: {fileID: 6524058378658174446, guid: 7c3fd5ef239219e499b13117472c255e,
+    type: 3}
 --- !u!114 &8280484265818650893
 MonoBehaviour:
   m_ObjectHideFlags: 0
