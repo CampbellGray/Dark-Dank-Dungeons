@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class MenuTransitions : MonoBehaviour
 {
-    public Text text;
     public Animator anim;
     public float transitionDelayTime = 1.0f;
 
