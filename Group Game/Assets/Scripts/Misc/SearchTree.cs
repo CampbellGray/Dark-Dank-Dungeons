@@ -7,20 +7,8 @@ using UnityEngine;
 public class SearchTree : MonoBehaviour
 {
     public BinarySearchTree searchTree = new BinarySearchTree();
-    public int potentialPrices = 15;
-    public int maxPrice = 100;
 
-    public int currentPrice = 0;
-
-    private void Start()
-    {
-        for(int i = 0; i < potentialPrices; i++)
-        {
-            int random = UnityEngine.Random.Range(0, maxPrice);
-            searchTree.AddValue(random);
-        }
-        searchTree.TraverseInOrder(searchTree.root);
-    }
+ 
 }
 [System.Serializable]
 public class BinarySearchTree
