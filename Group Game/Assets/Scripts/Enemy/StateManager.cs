@@ -31,6 +31,12 @@ public class StateManager : MonoBehaviour
     private Vector3 curPos;
     private Vector3 lastPos;
 
+    AudioSource audioSource;
+
+    public AudioClip attackSound;
+
+    public GameObject deathSound;
+
     public NavMeshAgent Agent { get; private set; }
     public Transform Target { get; private set; }
 
@@ -42,6 +48,7 @@ public class StateManager : MonoBehaviour
         randomLoot = GetComponent<RandomLoot>();
         movement = GetComponentInChildren<Animator>();
         Agent = GetComponent<NavMeshAgent>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     /// <summary>
@@ -99,6 +106,7 @@ public class StateManager : MonoBehaviour
     public void Attack()
     {
         movement.SetTrigger("Attack");
+        audioSource.PlayOneShot(attackSound, 1F);
         GameObject attackParticle = Instantiate(attackParticles, attackParticlesPos.transform.position, attackParticlesPos.transform.rotation);
         Destroy(attackParticle, 1.5f);
     }
@@ -128,6 +136,9 @@ public class StateManager : MonoBehaviour
     public void Death()
     {
         randomLoot.GetRandomItem();
+        Instantiate(deathSound, transform.position, transform.rotation);
+        Destroy(deathSound, 5f);
+        gameObject.SetActive(false);
         Destroy(this.gameObject);
         GameObject Explosion = Instantiate(explosion, explosionPos.transform.position, explosionPos.transform.rotation);
         Destroy(Explosion, 1.5f);

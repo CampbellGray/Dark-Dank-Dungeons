@@ -12,8 +12,11 @@ public class PlayerController : MonoBehaviour
     public Animator movement;
     public GameObject text;
     public PlayerData playerData;
+    public MenuTransitions mt;
 
     private HashIDs hash;
+
+    public AudioSource audioSource;
 
     //bool isGrounded;
     Vector3 velocity;
@@ -28,6 +31,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         levelBuilder = FindObjectOfType<LevelBuilder>();
+        mt = GameObject.Find("MenuTransitions").GetComponent<MenuTransitions>();
     }
 
     /// <summary>
@@ -45,10 +49,12 @@ public class PlayerController : MonoBehaviour
         if(x!=0 || z!=0)
         {
             movement.SetBool(hash.walkingBool, true);
+            
         }
         else
         {
             movement.SetBool(hash.walkingBool, false);
+            audioSource.Play();
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -66,7 +72,8 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                mt.PlayGame();
+
                 for(int i = 0; i < playerData.transform.childCount; i++)
                 {
                     var child = playerData.transform.GetChild(i).gameObject;
