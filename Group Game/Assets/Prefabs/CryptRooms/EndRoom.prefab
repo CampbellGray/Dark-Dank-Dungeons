@@ -542,6 +542,7 @@ GameObject:
   - component: {fileID: 7309954797547123633}
   - component: {fileID: 2459028005586916151}
   - component: {fileID: 4166301092495571125}
+  - component: {fileID: 4364934311605457018}
   m_Layer: 0
   m_Name: HellGatePrep
   m_TagString: Exit
@@ -622,6 +623,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0909856, y: 0.01, z: 0.097330466}
   m_Center: {x: 0, y: -3.4578733e-16, z: 0.048665233}
+--- !u!114 &4364934311605457018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6015333064703063936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d33209c1950e5a4099fe66bbc976451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8396099707134846398
 GameObject:
   m_ObjectHideFlags: 0

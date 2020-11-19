@@ -6,23 +6,15 @@ using UnityEngine.UI;
 
 public class MenuTransitions : MonoBehaviour
 {
-    public Animator anim;
-    public float transitionDelayTime = 1.0f;
-
     /// <summary>
     /// This will load the next scene in the game
     /// </summary>
+    /// 
     public void PlayGame()
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
-
-        if (currentScene == 1)
-        {
-            Score.scoreValue = 0;
-        }
-
-        StartCoroutine(DelayLoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
-        
+        SceneManager.LoadScene(currentScene + 1);
+        Score.scoreValue = 0;
     }
 
     /// <summary>
@@ -41,10 +33,4 @@ public class MenuTransitions : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    public IEnumerator DelayLoadLevel(int index)
-    {
-        anim.SetTrigger("Transition");
-        yield return new WaitForSeconds(transitionDelayTime);
-        SceneManager.LoadScene(index);
-    }
 }
