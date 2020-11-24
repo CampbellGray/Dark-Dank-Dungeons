@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -292,10 +292,11 @@ AudioSource:
   m_GameObject: {fileID: 540145379}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 34ca1c3ee053ded4999cd2a9ed2b01d4,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: e1200cb7ed223ca4cacfb9c47be211ea, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.7
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -976,6 +977,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: RaveDungeon
       objectReference: {fileID: 0}
+    - target: {fileID: 4276033344629270000, guid: 855c06a43a2f83947b93c4c4f7e7e316,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276033344629270000, guid: 855c06a43a2f83947b93c4c4f7e7e316,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 855c06a43a2f83947b93c4c4f7e7e316, type: 3}
 --- !u!1 &1489198017
@@ -1290,6 +1301,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 541510089}
     m_Modifications:
+    - target: {fileID: 494810660237207337, guid: 45f91710bfb81ee4f9a19dac1af90ca2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 494810660237207337, guid: 45f91710bfb81ee4f9a19dac1af90ca2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2526143626931081924, guid: 45f91710bfb81ee4f9a19dac1af90ca2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1454,6 +1475,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: +Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 3562900823952441344, guid: dfb1c021f6eac2a4f923a7db9c8df1e4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3562900823952441344, guid: dfb1c021f6eac2a4f923a7db9c8df1e4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfb1c021f6eac2a4f923a7db9c8df1e4, type: 3}
@@ -1625,6 +1656,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4067541736546475386, guid: 12e1d4c31947bb141be44e2b761f8d83,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 4067541736546475386, guid: 12e1d4c31947bb141be44e2b761f8d83,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12e1d4c31947bb141be44e2b761f8d83, type: 3}
 --- !u!4 &5395743310242860377 stripped
@@ -1700,6 +1741,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 768837518834933322, guid: e3bc51675448eb745ac75796921305ad,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 768837518834933322, guid: e3bc51675448eb745ac75796921305ad,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3bc51675448eb745ac75796921305ad, type: 3}
 --- !u!222 &5829888483005910728
@@ -1721,6 +1772,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: IRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385322435172566369, guid: 98a2d680d711e864f991480506384817,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 2385322435172566369, guid: 98a2d680d711e864f991480506384817,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2425784962595607433, guid: 98a2d680d711e864f991480506384817,
         type: 3}
@@ -1906,6 +1967,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: LRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 8874261933836756121, guid: d051a5dd07c7efa45bdcaa32c9d90a75,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874261933836756121, guid: d051a5dd07c7efa45bdcaa32c9d90a75,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d051a5dd07c7efa45bdcaa32c9d90a75, type: 3}
 --- !u!4 &8272508076638334662 stripped
@@ -1945,6 +2016,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 541510089}
     m_Modifications:
+    - target: {fileID: 7324780082535105030, guid: 20cc0983719c0de4ca92f7fb75c38784,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324780082535105030, guid: 20cc0983719c0de4ca92f7fb75c38784,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8728511603185563784, guid: 20cc0983719c0de4ca92f7fb75c38784,
         type: 3}
       propertyPath: m_Name
