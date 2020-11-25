@@ -1476,6 +1476,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: +Room
       objectReference: {fileID: 0}
+    - target: {fileID: 535160811525193909, guid: dfb1c021f6eac2a4f923a7db9c8df1e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3562900823952441344, guid: dfb1c021f6eac2a4f923a7db9c8df1e4,
         type: 3}
       propertyPath: m_TagString
@@ -1486,6 +1491,12 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6517007806684473671, guid: dfb1c021f6eac2a4f923a7db9c8df1e4,
+        type: 3}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 23800000, guid: f6c39e12945b2d743865c632a4ce49bf,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfb1c021f6eac2a4f923a7db9c8df1e4, type: 3}
 --- !u!114 &3445693221002839861 stripped
