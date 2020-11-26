@@ -136,8 +136,8 @@ public class StateManager : MonoBehaviour
     public void Death()
     {
         randomLoot.GetRandomItem();
-        Instantiate(deathSound, transform.position, transform.rotation);
-        Destroy(deathSound, 5f);
+        GameObject sound = Instantiate(deathSound, transform.position, transform.rotation);
+        Destroy(sound, 5f);
         gameObject.SetActive(false);
         Destroy(this.gameObject);
         GameObject Explosion = Instantiate(explosion, explosionPos.transform.position, explosionPos.transform.rotation);

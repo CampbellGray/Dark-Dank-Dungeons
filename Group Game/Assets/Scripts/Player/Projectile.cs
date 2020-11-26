@@ -10,8 +10,8 @@ public class Projectile : MonoBehaviour
     {
         if(other.tag == "Wall")
         {
-            Instantiate(projectileSound, transform.position, transform.rotation);
-            Destroy(projectileSound, 5f);
+            GameObject proj = Instantiate(projectileSound, transform.position, transform.rotation);
+            Destroy(proj, 5f);
             gameObject.SetActive(false);
             Destroy(this.gameObject);
         }
@@ -21,8 +21,8 @@ public class Projectile : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
-            Instantiate(projectileSound, transform.position, transform.rotation);
-            Destroy(projectileSound, 5f);
+            GameObject proj = Instantiate(projectileSound, transform.position, transform.rotation);
+            Destroy(proj, 5f);
             gameObject.SetActive(false);
             Destroy(this.gameObject);           
             Score.scoreValue += 50;

@@ -1,5 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp-Editor.dll:
+    - UnityEditor.AI.NavMeshAssetManager
     Assembly-CSharp.dll:
     - DisplayHighscores
     - Doorway
@@ -57,6 +59,7 @@ ScriptsOnlyBuild:
     - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -664,10 +667,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11614}
     - Class: 114
       Script: {instanceID: 11652}
-    - Class: 114
-      Script: {instanceID: 19894}
-    - Class: 114
-      Script: {instanceID: 19896}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1748,5 +1747,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/IceRooms.unity
   - Assets/Scenes/LavaRooms.unity
   - Assets/Scenes/GameOver.unity
-  playerPath: C:/Users/P457671/OneDrive - TAFE/Desktop/Dark-Dank-Dungeons/Group Game/Builds/V1.1
-    Final Final Build/Group Game.exe
+  playerPath: C:/Dark Dank Dungeon/Dark-Dank-Dungeons/Group Game/Builds/V1.2 - Post
+    Support/Group Game.exe

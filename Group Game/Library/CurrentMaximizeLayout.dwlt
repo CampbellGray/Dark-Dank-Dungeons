@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 781, y: 494}
   m_MaxSize: {x: 16006, y: 14044}
   vertical: 0
-  controlID: 1459
+  controlID: 945
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_MinSize: {x: 506, y: 494}
   m_MaxSize: {x: 12006, y: 14044}
   vertical: 1
-  controlID: 1460
+  controlID: 946
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_MinSize: {x: 506, y: 222}
   m_MaxSize: {x: 12006, y: 4022}
   vertical: 0
-  controlID: 1436
+  controlID: 947
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -214,7 +214,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 8664ffff6669ffffac7dffff5e84ffff74fbffff
+      m_ExpandedIDs: 32e7ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -337,9 +337,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.010315753, y: 0.91205996, z: -0.40928218, w: -0.02298796}
   m_Size:
-    m_Target: 105.88504
+    m_Target: 137.88986
     speed: 2
-    m_Value: 105.88504
+    m_Value: 137.88986
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -517,7 +517,7 @@ MonoBehaviour:
       splitSize: 6
       xOffset: 0
     m_HorizontalSplitter:
-      ID: 1441
+      ID: 952
       splitterInitialOffset: 157
       currentActiveSplitter: -1
       realSizes: a0000000a0000000
@@ -601,20 +601,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Prefabs/Enemies
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Prefabs/Enemies
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Dark Dank Dungeon\Dark-Dank-Dungeons\Group Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 1}
-    m_SelectedIDs: 2a350000
-    m_LastClickedID: 13610
-    m_ExpandedIDs: 000000006a2e0000d82e0000aa310000ec310000e03200000833000068330000963300009a330000b0330000d6330000dc3300002234000024340000da34000070350000a63500002236000038360000bc360000143700001e37000096370000f43700006e380000f63a0000f83a0000fa3a0000fc3a0000fe3a0000003b0000023b0000043b0000063b000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: fe480000
+    m_LastClickedID: 18686
+    m_ExpandedIDs: 00000000d0430000324400007a460000b64600008e470000ae470000064800002a4800002e480000404800005a48000060480000984800009a4800002a490000aa490000dc4900004e4a0000524a0000624a0000ce4a0000f24a0000fc4a00004c4b00008c4b0000f24b0000ec4d0000ee4d0000f04d0000f24d0000f44d0000f64d0000f84d0000fa4d0000fc4d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -642,7 +642,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006a2e0000d82e0000aa310000ec310000e03200000833000068330000963300009a330000b0330000d6330000dc3300002234000024340000da34000070350000a63500002236000038360000bc360000143700001e37000096370000f43700006e380000f63a0000f83a0000fa3a0000fc3a0000fe3a0000003b0000023b0000043b0000063b000000ca9a3b
+    m_ExpandedIDs: 00000000d0430000324400007a460000b64600008e470000ae470000064800002a4800002e480000404800005a48000060480000984800009a4800002a490000aa490000dc490000524a0000624a0000ce4a0000f24a0000fc4a00004c4b00008c4b0000f24b0000ec4d0000ee4d0000f04d0000f24d0000f44d0000f64d0000f84d0000fa4d0000fc4d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -667,8 +667,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: ec2e0000
-    m_LastClickedInstanceID: 12012
+    m_SelectedInstanceIDs: 042b0000
+    m_LastClickedInstanceID: 11012
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000dc82ffff
     m_RenameOverlay:
@@ -786,5 +786,5 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: 12012
-  m_LastVerticalScrollValue: 0
+  m_LastInspectedObjectInstanceID: 11012
+  m_LastVerticalScrollValue: 100
